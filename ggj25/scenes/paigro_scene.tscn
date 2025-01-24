@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3odwlejlafrf"]
+
+[ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/object.tscn" id="1_qo1rt"]
+
+[node name="PaigroScene" type="Node2D"]
+
+[node name="Object1" parent="." instance=ExtResource("1_qo1rt")]
+init_pos = Vector2(200, 200)
+
+[node name="Object2" parent="." instance=ExtResource("1_qo1rt")]
+init_pos = Vector2(100, 100)

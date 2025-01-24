@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bclcsuhbi3k57"]
+
+[ext_resource type="Script" path="res://scripts/draggableobject.gd" id="1_nmb0l"]
+[ext_resource type="Texture2D" uid="uid://bkj6tar8wy3jy" path="res://icon.svg" id="2_ti4vl"]
+
+[node name="Object" type="Node2D"]
+script = ExtResource("1_nmb0l")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ti4vl")
+
+[connection signal="button_down" from="Button" to="." method="on_down"]
+[connection signal="button_up" from="Button" to="." method="on_up"]
