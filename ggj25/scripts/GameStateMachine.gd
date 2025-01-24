@@ -1,5 +1,8 @@
 extends Node
 
+enum scenes {MAINMENU, TEXTO, CREDITOS, CENA, PICNIC, CINE, CAMA}
+
+var scenaActual: scenes = scenes.MAINMENU
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,4 +13,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _change_to_scene()
+func _change_to_scene(newScene: scenes):
+	scenaActual = newScene
