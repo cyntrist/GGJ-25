@@ -5,7 +5,7 @@
 [node name="PaigroScene" type="Node2D"]
 
 [node name="Object1" parent="." instance=ExtResource("1_qo1rt")]
-init_pos = Vector2(200, 200)
+init_pos = Vector2(400, 500)
 
 [node name="Object2" parent="." instance=ExtResource("1_qo1rt")]
-init_pos = Vector2(100, 100)
+init_pos = Vector2(200, 500)
