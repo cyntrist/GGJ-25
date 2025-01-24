@@ -14,4 +14,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _change_to_scene(newScene: scenes):
-	scenaActual = newScene
+	if scenaActual != newScene:
+		scenaActual = newScene
+	
