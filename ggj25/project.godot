@@ -13,3 +13,8 @@ config_version=5
 config/name="GGJ25"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scripts/Global.gd"
+GameStateMachine="*res://scripts/GameStateMachine.gd"
