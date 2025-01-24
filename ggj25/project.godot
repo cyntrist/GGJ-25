@@ -14,7 +14,6 @@ config/name="GGJ25"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
+[editor_plugins]
 
-Global="*res://scripts/Global.gd"
-GameStateMachine="*res://scripts/GameStateMachine.gd"
+enabled=PackedStringArray("res://addons/deformablemesh/plugin.cfg")
