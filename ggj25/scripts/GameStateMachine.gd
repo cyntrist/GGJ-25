@@ -26,13 +26,10 @@ func _process(delta: float) -> void:
 
 func _input(event):
 	if event.is_action_pressed("1"):
-		print("INPUT 1")
 		Global.change_scene(Global.Scenes.INTRO)
 	if event.is_action_pressed("2"):
-		print("INPUT 2")
 		Global.change_scene(Global.Scenes.MAIN_MENU)
 	if event.is_action_pressed("3"):
-		print("INPUT 3")
 		Global.change_scene(Global.Scenes.CONTEXTO)
 	if event.is_action_pressed("4"):
 		Global.change_scene(Global.Scenes.PREPOSTCITA)
