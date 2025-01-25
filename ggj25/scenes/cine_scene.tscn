@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bntoie4b8lq2u"]
 
-[ext_resource type="Texture2D" uid="uid://cb1n1f644tje" path="res://assets/Fondos/cine.jpg" id="1_wvrb2"]
+[ext_resource type="Texture2D" uid="uid://dtse21j06jgl5" path="res://assets/Fondos/cine.jpg" id="1_wvrb2"]
 
 [node name="Cine" type="Control"]
 layout_mode = 3
@@ -36,3 +36,6 @@ vertical_alignment = 1
 position = Vector2(591, 324)
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("1_wvrb2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 324)

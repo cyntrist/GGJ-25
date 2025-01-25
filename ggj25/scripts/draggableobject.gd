@@ -7,8 +7,8 @@ var dentro = false
 
 @export var dragType : int 
 @export var Ylimit : float
-@export var bubbleNode: Node2D
-@export var dragZoneNode: Node2D
+@export var draggersNodeBubble: Node2D
+@export var draggersNode: Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,7 +37,7 @@ func _onUp():
 	elapsedPercent = 0
 	if dragType == 3:
 		get_parent().remove_child(get_node("."))
-		dragZoneNode.add_child(get_node("."))
+		draggersNode.add_child(get_node("."))
 		dentro = false
 		global_position = get_global_mouse_position()
 		print(get_parent().name)
@@ -48,7 +48,7 @@ func _onEnter():
 	if dragType == 3 && not dentro:
 		dentro = true
 		get_parent().remove_child(get_node("."))
-		bubbleNode.add_child(get_node("."))
+		draggersNodeBubble.add_child(get_node("."))
 		print("HOLE HOLE")
 	pass
 
