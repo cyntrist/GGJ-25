@@ -14,12 +14,14 @@ point_count = 9
 
 [node name="Draggable2" parent="." instance=ExtResource("9_r15lc")]
 position = Vector2(94, -232)
+dragType = 1
 Ylimit = 200.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Draggable" parent="." instance=ExtResource("9_r15lc")]
 position = Vector2(-142, -234)
+dragType = 1
 Ylimit = 200.0
 
 [node name="Path2D" type="Path2D" parent="."]
