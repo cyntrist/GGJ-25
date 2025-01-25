@@ -35,11 +35,6 @@ func _process(delta: float) -> void:
 			timer = 0
 			subir = true
 
-
-
-	print(speed)
-	print(subir)
-	print(timer)
 	speed = clamp(speed, min_speed, max_speed)
 	progress_ratio  += delta * speed
 	pass
