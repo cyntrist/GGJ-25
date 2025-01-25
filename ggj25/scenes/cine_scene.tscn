@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bntoie4b8lq2u"]
+[gd_scene load_steps=2 format=3 uid="uid://bntoie4b8lq2u"]
+
+[ext_resource type="Texture2D" uid="uid://cb1n1f644tje" path="res://assets/Fondos/cine.jpg" id="1_wvrb2"]
 
 [node name="Cine" type="Control"]
 layout_mode = 3
@@ -29,3 +31,8 @@ theme_override_font_sizes/font_size = 32
 text = "CINE"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(591, 324)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("1_wvrb2")

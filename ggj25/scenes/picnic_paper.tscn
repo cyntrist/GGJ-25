@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bu160nqe2qqv2"]
+[gd_scene load_steps=5 format=3 uid="uid://pevvpd2ouetn"]
 
 [ext_resource type="Script" path="res://scripts/picnic_paper.gd" id="1_lgi7g"]
 [ext_resource type="Texture2D" uid="uid://cdpb47fof4yml" path="res://assets/img/colorLinea.png" id="2_kwg68"]
