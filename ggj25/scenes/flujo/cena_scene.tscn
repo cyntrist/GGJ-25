@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5bbxxg2ca853"]
+[gd_scene load_steps=7 format=3 uid="uid://c5bbxxg2ca853"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/cena.gd" id="1_faf3o"]
 [ext_resource type="Texture2D" uid="uid://ssyspj46yg8g" path="res://assets/Fondos/cena.jpg" id="2_mfx1q"]
+[ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="3_8kvlj"]
+[ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="4_j82i0"]
+[ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="5_nnx67"]
+
+[sub_resource type="Curve2D" id="Curve2D_20id7"]
+_data = {
+"points": PackedVector2Array(11.1293, -0.209987, -11.1293, 0.209987, 270, -49, -2.61844, 13.2422, 2.61844, -13.2422, 246, -71, -8.79813, -3.98122, 8.79813, 3.98122, 275, -86, -6.71958, -12.1792, 6.71958, 12.1792, 290, -74, 2.51984, -14.6991, -2.51984, 14.6991, 260, -41, -6.2996, -6.50959, 6.2996, 6.50959, 265, -23, -8.39947, 2.09987, 8.39947, -2.09987, 284, -18, 1.67989, 16.379, -1.67989, -16.379, 296, -32, 0, 0, 0, 0, 276, -51, -3.56688, 9.70376, 3.56688, -9.70376, 271, -66, -11.8626, -4.09088, 11.8626, 4.09088, 292, -83, 1.76577, -13.773, -1.76577, 13.773, 302, -62, 0, 0, 0, 0, 273, -49, 4.94416, -10.7712, -4.94416, 10.7712, 248, -42, -7.94597, -8.29913, 7.94597, 8.29913, 248, -20, -11.1244, 4.41443, 11.1244, -4.41443, 268, -20, 0, 9.05747, 0, -9.05747, 281, -38, 0, 0, 0, 0, 273, -48, 0, 0, 0, 0, 270, -49)
+}
+point_count = 19
 
 [node name="Cena" type="Control"]
 layout_mode = 3
@@ -42,3 +51,49 @@ texture = ExtResource("2_mfx1q")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(580, 325)
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(274, 349)
+curve = SubResource("Curve2D_20id7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(270, -49)
+rotation = 3.12273
+rotates = false
+script = ExtResource("3_8kvlj")
+
+[node name="Burbuja" parent="Path2D/PathFollow2D" instance=ExtResource("4_j82i0")]
+position = Vector2(-1.94307, -3.03719)
+rotation = -3.12273
+
+[node name="DraggersBuble" type="Node2D" parent="Path2D/PathFollow2D"]
+
+[node name="DraggesNormal" type="Node2D" parent="."]
+
+[node name="Tenedor" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
+position = Vector2(1034, 559)
+dragType = 3
+Ylimit = 550.0
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
+draggersNode = NodePath("..")
+
+[node name="AlbondigaIzq" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
+position = Vector2(250, 550)
+dragType = 3
+Ylimit = 550.0
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
+draggersNode = NodePath("..")
+
+[node name="AlbondigaDer" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
+position = Vector2(865, 558)
+dragType = 3
+Ylimit = 550.0
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
+draggersNode = NodePath("..")
+
+[node name="Copa" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
+position = Vector2(87, 550)
+dragType = 3
+Ylimit = 550.0
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
+draggersNode = NodePath("..")
