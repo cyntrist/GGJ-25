@@ -34,3 +34,6 @@ func _onUp():
 	Global.is_dragging = false
 	elapsedPercent = 0
 	#print("Despulsado")
+
+func _onEnter():
+	pass
