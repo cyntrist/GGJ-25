@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu160nqe2qqv2"]
+[gd_scene load_steps=5 format=3 uid="uid://bu160nqe2qqv2"]
 
 [ext_resource type="Script" path="res://scripts/picnic_paper.gd" id="1_lgi7g"]
+[ext_resource type="Texture2D" uid="uid://cdpb47fof4yml" path="res://assets/img/colorLinea.png" id="2_kwg68"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_62ams"]
 size = Vector2(374, 300.5)
+
+[sub_resource type="Gradient" id="Gradient_kqcrs"]
+offsets = PackedFloat32Array(0, 0.00666667, 0.02, 0.0266667, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.218018, 0.218018, 0.218018, 1, 0.539549, 0.539549, 0.539549, 1, 0.806667, 0.806667, 0.806667, 1, 1, 1, 1, 1)
 
 [node name="PicnicPaper" type="Area2D"]
 script = ExtResource("1_lgi7g")
@@ -13,6 +18,9 @@ shape = SubResource("RectangleShape2D_62ams")
 debug_color = Color(0.640179, 0.523702, 0.11765, 1)
 
 [node name="Line2D" type="Line2D" parent="."]
+default_color = Color(0.368627, 0.356863, 0.109804, 1)
+gradient = SubResource("Gradient_kqcrs")
+texture = ExtResource("2_kwg68")
 
 [connection signal="mouse_entered" from="." to="." method="_enablePaint"]
 [connection signal="mouse_exited" from="." to="." method="_disablePaint"]

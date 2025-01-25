@@ -9,25 +9,26 @@ var act_paint = 0 # Cantidad de pintura que llevas.
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	color = Color(94, 91, 28, 1)
+	$Line2D.default_color = color
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	print(color)
 	pass
 
+# Coger el input.
 func _input(event):
+	# Y si puedes pintar pintas.
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_paint:
 		_paint()
 	pass
 # Evidentemente pinta.
 func _paint():
 	# Pintas si puedes pintar.
-	print("Pinta y colorea.")
-	#if act_paint < max_paint:
-		#draw_circle(get_local_mouse_position(), 20, color)
-		#act_paint += 1	
-	$Line2D.add_point(get_global_mouse_position())
+	#print("Pinta y colorea.")
+	$Line2D.add_point(get_local_mouse_position())
 	pass
 
 
