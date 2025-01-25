@@ -55,6 +55,8 @@ func _area_enter(area: Area2D) -> void:
 				$rendering/Pompa.modulate = Color(Global.r_change, Global.g_change, Global.b_change, 1)
 			2: # 2 es cuando se pone cosas la burbuja.
 				print("Ponible")
+			3: # 3 es cuando se quedan dentro los objetos
+				area.get_parent()._onEnter()
 		pass
 	# Cambio de tamanyo.
 	if Global.size_bubble_percent < actual_limit:
