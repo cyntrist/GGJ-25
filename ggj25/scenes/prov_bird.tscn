@@ -8,7 +8,7 @@ size = Vector2(134, 133)
 
 [sub_resource type="Animation" id="Animation_lslib"]
 resource_name = "prov_bird_anim"
-length = 10.0
+length = 5.0
 loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
