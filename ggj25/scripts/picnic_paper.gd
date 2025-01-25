@@ -3,7 +3,6 @@ extends Node2D
 var can_paint = false # Para saber si se puede pintar.
 var act_paint = 0 # Cantidad de pintura que llevas.
 
-@export var max_paint = 500 # Gotas de pintura que se puede pintar de maximo para no petar.
 @export var color: Color # Color con el que pintas.
 
 # Called when the node enters the scene tree for the first time.

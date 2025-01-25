@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://mqr3j6tyasd"]
+[gd_scene load_steps=3 format=3 uid="uid://mqr3j6tyasd"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/cama.gd" id="1_hs8la"]
+[ext_resource type="Texture2D" uid="uid://gb7bvlwtlp0j" path="res://assets/Fondos/cama.jpg" id="2_w31d4"]
 
 [node name="Cama" type="Control"]
 layout_mode = 3
@@ -32,3 +33,8 @@ theme_override_font_sizes/font_size = 32
 text = "CAMA"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(567, 324)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("2_w31d4")

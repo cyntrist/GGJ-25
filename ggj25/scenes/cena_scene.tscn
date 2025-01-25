@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5bbxxg2ca853"]
+[gd_scene load_steps=3 format=3 uid="uid://c5bbxxg2ca853"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/cena.gd" id="1_faf3o"]
+[ext_resource type="Texture2D" uid="uid://tcktj7pbfpfx" path="res://assets/Fondos/cena.jpg" id="2_mfx1q"]
 
 [node name="Cena" type="Control"]
 layout_mode = 3
@@ -33,3 +34,8 @@ text = "CENA
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(574, 323)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("2_mfx1q")
