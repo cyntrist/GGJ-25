@@ -5,6 +5,10 @@ extends Node2D
 @export var base_size_buble: float = 1
 @export var base_size_collider: float = 2
 
+@export var color_r = 94 # Color que tiene que llegar en R.
+@export var color_g = 91 # Color que tiene que llegar en G.
+@export var color_b = 28 # Color que tiene que llegar en B.
+
 var ini_scale1 = Vector3(1,1,1) * base_size_buble
 var ini_scale2 = Vector2(1,1) * base_size_collider
 var next_scale1 = ini_scale1
@@ -38,12 +42,12 @@ func _area_enter(area: Area2D) -> void:
 				print("Deformable")
 			1:
 				print("Pintable")
-				if Global.r_change > 0.36:
-					Global.r_change -= 0.01
-				if Global.g_change > 0.30:
-					Global.g_change -= 0.01
-				if Global.b_change > 0.10:
-					Global.b_change -= 0.05
+				if Global.r_change > color_r/255:
+					Global.r_change -= 0.02
+				if Global.g_change > color_g/255:
+					Global.g_change -= 0.02
+				if Global.b_change > color_b/255:
+					Global.b_change -= 0.02
 				$rendering/Pompa.modulate = Color(Global.r_change, Global.g_change, Global.b_change, 1)
 			2: # 2 es cuando se pone cosas la burbuja.
 				print("Ponible")
