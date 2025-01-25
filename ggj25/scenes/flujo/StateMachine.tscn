@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c7qrogiqlu6kl"]
+[gd_scene load_steps=18 format=3 uid="uid://c7qrogiqlu6kl"]
 
 [ext_resource type="Script" path="res://scripts/GameStateMachine.gd" id="1_n0ssg"]
 [ext_resource type="PackedScene" uid="uid://doma3ldba1l8e" path="res://scenes/flujo/credits_scene.tscn" id="2_te1d5"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://drfd4ho53yt5b" path="res://scenes/flujo/prepostcita_scene.tscn" id="9_jdwfp"]
 [ext_resource type="Script" path="res://scripts/scene_scripts/prepostcita.gd" id="10_8mccr"]
 [ext_resource type="PackedScene" uid="uid://kuee5s7qpvx2" path="res://scenes/flujo/context_scene.tscn" id="11_cl8xq"]
-[ext_resource type="Script" path="res://scripts/scene_scripts/contexto.gd" id="12_olsx7"]
 [ext_resource type="PackedScene" uid="uid://dy4tygucl1fuu" path="res://scenes/flujo/main_menu.tscn" id="13_elxvt"]
 [ext_resource type="PackedScene" uid="uid://dnysdn0d3o7b2" path="res://scenes/flujo/intro_scene.tscn" id="14_jm1u2"]
 [ext_resource type="PackedScene" uid="uid://batkjgiqud0xv" path="res://scenes/null_scene.tscn" id="15_srbh3"]
@@ -72,7 +71,6 @@ script = ExtResource("10_8mccr")
 [node name="Contexto" parent="." instance=ExtResource("11_cl8xq")]
 process_mode = 4
 visible = false
-script = ExtResource("12_olsx7")
 
 [node name="MainMenu" parent="." instance=ExtResource("13_elxvt")]
 process_mode = 4
