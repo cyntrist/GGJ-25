@@ -5,21 +5,36 @@ extends Node2D
 @export var base_size_buble: float = 1
 @export var base_size_collider: float = 2
 
+var ini_scale1 = Vector3(1,1,1) * base_size_buble
+var ini_scale2 = Vector2(1,1) * base_size_collider
+var next_scale1 = ini_scale1
+var next_scale2 = ini_scale2
+
+const SCALE_STEP = 3;
 var actual_limit
 
 func _ready() -> void: 
+	burbuja_mesh.scale = ini_scale1
+	burbuja_collider.scale = ini_scale2
 	_on_active()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	burbuja_mesh.scale = Vector3(1,1,1) * Global.size_bubble_percent + Vector3(1,1,1) * base_size_buble
-	burbuja_collider.scale =  Vector2(1,1) * Global.size_bubble_percent + Vector2(1,1) * base_size_collider
+	var scale1 = burbuja_mesh.scale
+	var scale2 = burbuja_collider.scale
+
+	burbuja_mesh.scale = burbuja_mesh.scale.lerp(next_scale1, delta * SCALE_STEP)
+	burbuja_collider.scale = burbuja_collider.scale.lerp(next_scale2, delta * SCALE_STEP)
+	pass
+	# scale1 = Vector3(1,1,1) * Global.size_bubble_percent
+	# scale2 =  Vector2(1,1) * Global.size_bubble_percent
 
 
 func _on_active():
 	actual_limit = Global.size_bubble_percent + 0.25
 
 func _area_enter(area: Area2D) -> void:
+	print("COLISION")
 	if area.name == "DragAr":
 		match area.get_parent().dragType:
 			0:
@@ -41,3 +56,7 @@ func _area_enter(area: Area2D) -> void:
 	# Cambio de tamanyo.
 	if Global.size_bubble_percent < actual_limit:
 		Global.size_bubble_percent += 0.01;	
+		var scale1 = burbuja_mesh.scale
+		var scale2 = burbuja_collider.scale
+		next_scale1 = scale1 + Vector3(1,1,1) * Global.size_bubble_percent
+		next_scale2 = scale2 + Vector2(1,1) * Global.size_bubble_percent
