@@ -3,7 +3,6 @@ extends Node2D
 var is_selected = false # Para saber si esta seleccionado y moverlo.
 
 const text1 = preload("res://icon.svg")
-signal picked
 @onready var rigid_body_2d: RigidBody2D = $RigidBody2D
 @onready var spherical_deformer: MeshInstance3D = $SphericalDeformer
 
@@ -21,7 +20,6 @@ func _process(delta):
 func _onDown():
 	is_selected = true
 	Global.is_dragging = true
-	picked.emit()
 	#print("Pulsado")
 
 # Para cuando se deja de pulsar.
