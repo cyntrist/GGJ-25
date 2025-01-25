@@ -15,7 +15,7 @@ func _ready():
 func _process(delta):
 	# Mover el objeto.
 	if is_selected:
-		global_position = get_global_mouse_position()
+		$RigidBody2D.global_position = get_global_mouse_position()
 
 # Para cuando se pulsa.
 func _onDown():
