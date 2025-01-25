@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://chq2ttpvye2ui"]
 
-[ext_resource type="Texture2D" uid="uid://bnv18xb6ewgu1" path="res://assets/Fondos/picnic.jpg" id="1_ogovi"]
-[ext_resource type="Texture2D" uid="uid://bao41hs4wb10l" path="res://assets/Fondos/papel.png" id="2_iwl5s"]
+[ext_resource type="Texture2D" uid="uid://06dek1iduwb4" path="res://assets/Fondos/picnic.jpg" id="1_ogovi"]
+[ext_resource type="Texture2D" uid="uid://blaqawhmbu56j" path="res://assets/Fondos/papel.png" id="2_iwl5s"]
 [ext_resource type="PackedScene" uid="uid://pevvpd2ouetn" path="res://scenes/picnic_paper.tscn" id="3_510cx"]
 [ext_resource type="PackedScene" uid="uid://djppmmhmacox3" path="res://scenes/prov_bird.tscn" id="4_nw8xa"]
 
@@ -14,15 +14,18 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 658.0
 color = Color(0.054902, 0.054902, 0.054902, 1)
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 389.0
 offset_top = 249.0
 offset_right = 753.0
@@ -45,8 +48,8 @@ texture = ExtResource("2_iwl5s")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 328)
 
+[node name="prov_bird" parent="." instance=ExtResource("4_nw8xa")]
+
 [node name="Papel" parent="." instance=ExtResource("3_510cx")]
 position = Vector2(854.2, 498.8)
 color = Color(0.368627, 0.356863, 0.109804, 1)
-
-[node name="prov_bird" parent="." instance=ExtResource("4_nw8xa")]
