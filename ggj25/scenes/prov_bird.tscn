@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://djppmmhmacox3"]
+
+[ext_resource type="Script" path="res://scripts/prov_bird.gd" id="1_ah3ph"]
+[ext_resource type="Texture2D" uid="uid://bkj6tar8wy3jy" path="res://icon.svg" id="2_cy5tc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_piiig"]
+size = Vector2(134, 133)
+
+[sub_resource type="Animation" id="Animation_lslib"]
+resource_name = "prov_bird_anim"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1280, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, -81, -0.25, 0, 0.25, 0, 1280, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 10)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-127, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, -445, -0.25, 0, 0.25, 0, -127, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 10)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0.271276, -0.25, 0, 0.25, 0, -0.214427, -0.25, 0, 0.25, 0, 0.213341, -0.25, 0, 0.25, 0, -0.196017, -0.25, 0, 0.25, 0, 0.192663, -0.25, 0, 0.25, 0, -0.240051, -0.25, 0, 0.25, 0, -0.240051, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 10)
+}
+
+[sub_resource type="Animation" id="Animation_1wr88"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1280, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-127, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7d3h6"]
+_data = {
+"RESET": SubResource("Animation_1wr88"),
+"prov_bird_anim": SubResource("Animation_lslib")
+}
+
+[node name="prov_bird" type="RigidBody2D"]
+position = Vector2(1280, -127)
+script = ExtResource("1_ah3ph")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -6.5)
+shape = SubResource("RectangleShape2D_piiig")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -66.0
+offset_top = -74.0
+offset_right = 70.0
+offset_bottom = 62.0
+icon = ExtResource("2_cy5tc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7d3h6")
+}
+
+[connection signal="button_down" from="Button" to="." method="_on_bird_down"]
