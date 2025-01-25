@@ -16,9 +16,9 @@ offset_right = 73.0
 offset_bottom = 66.0
 icon = ExtResource("2_ti4vl")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="DragAr" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAr"]
 position = Vector2(6, 0)
 shape = SubResource("RectangleShape2D_h3hmd")
 

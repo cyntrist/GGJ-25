@@ -4,6 +4,7 @@ var is_selected = false # Para saber si esta seleccionado y moverlo.
 var maxPercent = 10
 var elapsedPercent = 0
 
+@export var dragType : int 
 @export var Ylimit : float
 
 
