@@ -23,3 +23,7 @@ func _on_active():
 func _area_enter(area: Area2D) -> void:
 	if Global.size_bubble_percent < actual_limit:
 		Global.size_bubble_percent += 0.01;
+		
+func _change_color():
+	
+	pass
