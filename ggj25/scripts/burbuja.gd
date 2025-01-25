@@ -5,35 +5,15 @@ extends Node2D
 @export var base_size_buble: float = 1
 @export var base_size_collider: float = 2
 
-@export var shake_factor = 0.1
-@onready var rng = RandomNumberGenerator.new()
-@onready var noise = FastNoiseLite.new()
-var shake_speed = 10;
-@onready var ini_pos = self.position
-
 var actual_limit
 
 func _ready() -> void: 
-	noise = FastNoiseLite.new()
-	print("INIPOS: ", ini_pos)
 	_on_active()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	burbuja_mesh.scale = Vector3(1,1,1) * Global.size_bubble_percent + Vector3(1,1,1) * base_size_buble
 	burbuja_collider.scale =  Vector2(1,1) * Global.size_bubble_percent + Vector2(1,1) * base_size_collider
-	
-	#var xOffset = Mathf.PerlinNoise(delta * shakeSpeed, 0);
-	#var yOffset = Mathf.PerlinNoise(0, delta * shakeSpeed);
-
-	# var x_offset = noise.get_noise_2d(delta * shake_speed, 0)
-	# var y_offset = noise.get_noise_2d(0, delta * shake_speed) 
-	# # var xr_offset = rng.randf();
-	# # var yr_offset = rng.randf();
-	# # self.position = ini_pos + Vector2(xr_offset,yr_offset) 
-	# self.position = ini_pos + Vector2(x_offset,y_offset) 
-
-	# print("POSITION: ", self.position)
 
 
 func _on_active():
