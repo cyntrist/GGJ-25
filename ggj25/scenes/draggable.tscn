@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75f1f"]
 size = Vector2(135, 135)
 
-[node name="Object" type="RigidBody2D"]
+[node name="Draggable" type="RigidBody2D"]
 script = ExtResource("1_nmb0l")
 
 [node name="Button" type="Button" parent="."]

@@ -26,4 +26,6 @@ func _onDown():
 func _onUp():
 	is_selected = false
 	Global.is_dragging = false
+	
+	
 	#print("Despulsado")

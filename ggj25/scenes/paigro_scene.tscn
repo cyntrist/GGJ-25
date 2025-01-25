@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3odwlejlafrf"]
 
-[ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/object.tscn" id="1_qo1rt"]
+[ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="1_qo1rt"]
 [ext_resource type="PackedScene" uid="uid://bu160nqe2qqv2" path="res://scenes/picnic_paper.tscn" id="2_8x3wy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vniat"]
