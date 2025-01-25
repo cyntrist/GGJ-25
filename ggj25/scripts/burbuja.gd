@@ -55,7 +55,7 @@ func _area_enter(area: Area2D) -> void:
 		pass
 	# Cambio de tamanyo.
 	if Global.size_bubble_percent < actual_limit:
-		Global.size_bubble_percent += 0.01;	
+		Global.size_bubble_percent += 0.02;	
 		var scale1 = burbuja_mesh.scale
 		var scale2 = burbuja_collider.scale
 		next_scale1 = scale1 + Vector3(1,1,1) * Global.size_bubble_percent
