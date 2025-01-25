@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cskdc2t83egfr"]
+
+[ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="2_oknp2"]
+
+[node name="ScenaAndres" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Burbuja" parent="." instance=ExtResource("2_oknp2")]

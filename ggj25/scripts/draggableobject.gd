@@ -1,10 +1,14 @@
 extends Node2D
 
 var is_selected = false # Para saber si esta seleccionado y moverlo.
-var maxPercent = 10
+var maxPercent = 1000
 var elapsedPercent = 0
+var dentro = false
 
+@export var dragType : int 
 @export var Ylimit : float
+@export var bubbleNode: Node2D
+@export var dragZoneNode: Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,9 +19,9 @@ func _process(delta):
 	# Mover el objeto.
 	if is_selected:
 		global_position = get_global_mouse_position()
-	elif global_position.y < Ylimit:
+	elif global_position.y < Ylimit && not dentro:
 		if elapsedPercent <maxPercent:
-			elapsedPercent += 0.1
+			elapsedPercent += 10 * delta
 		global_position.y += elapsedPercent
 
 # Para cuando se pulsa.
@@ -31,4 +35,24 @@ func _onUp():
 	is_selected = false
 	Global.is_dragging = false
 	elapsedPercent = 0
+	if dragType == 3:
+		get_parent().remove_child(get_node("."))
+		dragZoneNode.add_child(get_node("."))
+		dentro = false
+		global_position = get_global_mouse_position()
+		print(get_parent().name)
 	#print("Despulsado")
+
+func _onEnter():
+	#0 = deformable, 1 = pintable, 2 = sombrero, 3 meterse dentro
+	if dragType == 3 && not dentro:
+		dentro = true
+		get_parent().remove_child(get_node("."))
+		bubbleNode.add_child(get_node("."))
+		print("HOLE HOLE")
+	pass
+
+func _onExit():
+	#0 = deformable, 1 = pintable, 2 = sombrero, 3 meterse dentro
+	
+	pass
