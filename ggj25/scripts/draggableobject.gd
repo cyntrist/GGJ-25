@@ -9,10 +9,13 @@ var dentro = false
 @export var Ylimit : float = 200
 @export var draggersNodeBubble: Node2D
 @export var draggersNode: Node2D
+
+var rb: RigidBody2D
 const PATH_PREFAB = preload("res://prefabs/path_prefab.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	rb = get_node(".")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,10 +23,10 @@ func _process(delta):
 	# Mover el objeto.
 	if is_selected:
 		global_position = get_global_mouse_position()
-	elif global_position.y < Ylimit && not dentro:
-		if elapsedPercent <maxPercent:
-			elapsedPercent += 10 * delta
-		global_position.y += elapsedPercent
+	#elif global_position.y < Ylimit && not dentro:
+		#if elapsedPercent <maxPercent:
+			#elapsedPercent += 10 * delta
+		#global_position.y += elapsedPercent
 
 # Para cuando se pulsa.
 func _onDown():
@@ -37,10 +40,10 @@ func _onUp():
 	Global.is_dragging = false
 	elapsedPercent = 0
 	if dragType == 3:
-		get_parent().remove_child(get_node("."))
-		draggersNode.add_child(get_node("."))
+		get_parent().remove_child(rb)
+		draggersNode.add_child(rb)
+		rb.sleeping = false
 		dentro = false
-		rotation = 0
 		global_position = get_global_mouse_position()
 		print(get_parent().name)
 	#print("Despulsado")
@@ -49,10 +52,11 @@ func _onEnter():
 	#0 = deformable, 1 = pintable, 2 = sombrero, 3 meterse dentro
 	if dragType == 3 && not dentro:
 		dentro = true
-		get_parent().remove_child(get_node("."))
+		rb.sleeping = true
+		get_parent().remove_child(rb)
 		var newpath = PATH_PREFAB.instantiate()
 		draggersNodeBubble.add_child(newpath)
-		newpath.get_node("Path2D/PathFollow2D").add_child(get_node("."))
+		newpath.get_node("Path2D/PathFollow2D").add_child(rb)
 		position = Vector2(0,0)
 		print(self.get_path())
 		rotation = 90
