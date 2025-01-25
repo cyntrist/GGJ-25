@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 	# # self.position = ini_pos + Vector2(xr_offset,yr_offset) 
 	# self.position = ini_pos + Vector2(x_offset,y_offset) 
 
-	print("POSITION: ", self.position)
+	# print("POSITION: ", self.position)
 
 
 func _on_active():
