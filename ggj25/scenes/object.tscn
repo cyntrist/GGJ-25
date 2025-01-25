@@ -13,5 +13,12 @@ offset_right = 73.0
 offset_bottom = 66.0
 icon = ExtResource("2_ti4vl")
 
-[connection signal="button_down" from="Button" to="." method="on_down"]
-[connection signal="button_up" from="Button" to="." method="on_up"]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[connection signal="button_down" from="Button" to="." method="_onDown"]
+[connection signal="button_up" from="Button" to="." method="_onUp"]

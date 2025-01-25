@@ -11,6 +11,7 @@ const text1 = preload("res://icon.svg")
 func _ready():
 	# Settear la posicion al inicio.
 	global_position = init_pos
+	
 	pass # Replace with function body.
 
 
@@ -21,13 +22,15 @@ func _process(delta):
 		global_position = get_global_mouse_position()
 
 # Para cuando se pulsa
-func on_down():
+func _onDown():
 	is_selected = true
+	Global.is_dragging = true
 	#print("Pulsado")
 
 
 # Para cuando se deja de pulsar.
-func on_up():
+func _onUp():
 	is_selected = false
+	Global.is_dragging = false
 	global_position = init_pos # Resetear la posicion
 	#print("Despulsado")

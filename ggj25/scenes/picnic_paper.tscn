@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu160nqe2qqv2"]
+
+[ext_resource type="Script" path="res://scripts/picnic_paper.gd" id="1_lgi7g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_62ams"]
+size = Vector2(374, 300.5)
+
+[node name="PicnicPaper" type="Area2D"]
+script = ExtResource("1_lgi7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_62ams")
+debug_color = Color(0.640179, 0.523702, 0.11765, 1)
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_enablePaint"]
+[connection signal="mouse_exited" from="." to="." method="_disablePaint"]

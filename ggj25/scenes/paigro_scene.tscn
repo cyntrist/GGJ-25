@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3odwlejlafrf"]
+[gd_scene load_steps=3 format=3 uid="uid://d3odwlejlafrf"]
 
 [ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/object.tscn" id="1_qo1rt"]
+[ext_resource type="PackedScene" uid="uid://bu160nqe2qqv2" path="res://scenes/picnic_paper.tscn" id="2_8x3wy"]
 
 [node name="PaigroScene" type="Node2D"]
 
@@ -9,3 +10,7 @@ init_pos = Vector2(400, 500)
 
 [node name="Object2" parent="." instance=ExtResource("1_qo1rt")]
 init_pos = Vector2(200, 500)
+
+[node name="PicnicPaper" parent="." instance=ExtResource("2_8x3wy")]
+position = Vector2(332, 215)
+color = Color(0.368627, 0.356863, 0.109804, 1)
