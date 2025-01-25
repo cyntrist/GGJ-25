@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://sraxxrvyh58f"]
+[gd_scene load_steps=8 format=3 uid="uid://sraxxrvyh58f"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/cena.gd" id="1_faf3o"]
 [ext_resource type="Texture2D" uid="uid://ssyspj46yg8g" path="res://assets/Fondos/cena.jpg" id="2_mfx1q"]
@@ -11,6 +11,8 @@ _data = {
 "points": PackedVector2Array(11.1293, -0.209987, -11.1293, 0.209987, 270, -49, -2.61844, 13.2422, 2.61844, -13.2422, 246, -71, -8.79813, -3.98122, 8.79813, 3.98122, 275, -86, -6.71958, -12.1792, 6.71958, 12.1792, 290, -74, 2.51984, -14.6991, -2.51984, 14.6991, 260, -41, -6.2996, -6.50959, 6.2996, 6.50959, 265, -23, -8.39947, 2.09987, 8.39947, -2.09987, 284, -18, 1.67989, 16.379, -1.67989, -16.379, 296, -32, 0, 0, 0, 0, 276, -51, -3.56688, 9.70376, 3.56688, -9.70376, 271, -66, -11.8626, -4.09088, 11.8626, 4.09088, 292, -83, 1.76577, -13.773, -1.76577, 13.773, 302, -62, 0, 0, 0, 0, 273, -49, 4.94416, -10.7712, -4.94416, 10.7712, 248, -42, -7.94597, -8.29913, 7.94597, 8.29913, 248, -20, -11.1244, 4.41443, 11.1244, -4.41443, 268, -20, 0, 9.05747, 0, -9.05747, 281, -38, 0, 0, 0, 0, 273, -48, 0, 0, 0, 0, 270, -49)
 }
 point_count = 19
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_256bl"]
 
 [node name="Cena" type="Control"]
 layout_mode = 3
@@ -68,25 +70,49 @@ rotation = -3.12273
 [node name="DraggesNormal" type="Node2D" parent="."]
 
 [node name="Tenedor" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
-position = Vector2(483, 237)
+position = Vector2(470, 229)
 dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
 
 [node name="AlbondigaIzq" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
-position = Vector2(-301, 228)
+position = Vector2(-314, 220)
 dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
 
 [node name="AlbondigaDer" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
-position = Vector2(314, 236)
+position = Vector2(301, 228)
 dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
 
 [node name="Copa" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
-position = Vector2(-464, 228)
+position = Vector2(-477, 220)
 dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 318)
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_256bl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-573, 6)
+rotation = 1.5708
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_256bl")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, -313)
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_256bl")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(579, 15)
+rotation = 1.5708
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_256bl")
