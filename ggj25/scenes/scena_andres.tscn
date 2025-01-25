@@ -7,6 +7,7 @@
 
 [node name="Draggable2" parent="." instance=ExtResource("9_r15lc")]
 position = Vector2(94, -232)
+dragType = 1
 Ylimit = 200.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -14,6 +15,7 @@ Ylimit = 200.0
 [node name="Burbuja" parent="." instance=ExtResource("2_1eld3")]
 position = Vector2(274, -44)
 
-[node name="Draggable" parent="." instance=ExtResource("9_r15lc")]
+[node name="PINTABLE" parent="." instance=ExtResource("9_r15lc")]
 position = Vector2(-142, -234)
+dragType = 1
 Ylimit = 200.0

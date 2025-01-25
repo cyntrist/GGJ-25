@@ -21,9 +21,22 @@ func _on_active():
 	actual_limit = Global.size_bubble_percent + 0.25
 
 func _area_enter(area: Area2D) -> void:
+	if area.name == "DragAr":
+		match area.get_parent().dragType:
+			0:
+				print("Deformable")
+			1:
+				print("Pintable")
+				if Global.r_change > 0.36:
+					Global.r_change -= 0.01
+				if Global.g_change > 0.30:
+					Global.g_change -= 0.01
+				if Global.b_change > 0.10:
+					Global.b_change -= 0.05
+				$rendering/Pompa.modulate = Color(Global.r_change, Global.g_change, Global.b_change, 1)
+			2: # 2 es cuando se pone cosas la burbuja.
+				print("Ponible")
+		pass
+	# Cambio de tamanyo.
 	if Global.size_bubble_percent < actual_limit:
-		Global.size_bubble_percent += 0.01;
-		
-func _change_color():
-	
-	pass
+		Global.size_bubble_percent += 0.01;	
