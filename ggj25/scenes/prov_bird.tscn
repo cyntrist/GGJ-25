@@ -17,9 +17,9 @@ tracks/0/path = NodePath(".:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
-"points": PackedFloat32Array(1280, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, 83, -0.25, 0, 0.25, 0, -81, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5)
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1280, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -28,9 +28,9 @@ tracks/1/path = NodePath(".:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
-"points": PackedFloat32Array(-127, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, 86, -0.25, 0, 0.25, 0, -445, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5)
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-127, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -39,9 +39,9 @@ tracks/2/path = NodePath(".:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0.271276, -0.25, 0, 0.25, 0, -0.214427, -0.25, 0, 0.25, 0, 0.213341, -0.25, 0, 0.25, 0, -0.196017, -0.25, 0, 0.25, 0, 0.192663, -0.25, 0, 0.25, 0, -0.240051, -0.25, 0, 0.25, 0, -0.240051, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5)
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="Animation" id="Animation_1wr88"]
@@ -91,7 +91,7 @@ position = Vector2(1280, -127)
 script = ExtResource("1_ah3ph")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -6.5)
+position = Vector2(-1278, 120.5)
 shape = SubResource("RectangleShape2D_piiig")
 
 [node name="Button" type="Button" parent="."]
@@ -105,5 +105,7 @@ icon = ExtResource("2_cy5tc")
 libraries = {
 "": SubResource("AnimationLibrary_7d3h6")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="button_down" from="Button" to="." method="_on_bird_down"]

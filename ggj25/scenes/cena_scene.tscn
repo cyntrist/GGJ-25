@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://sraxxrvyh58f"]
+
+[ext_resource type="Script" path="res://scripts/scene_scripts/cena.gd" id="1_faf3o"]
+[ext_resource type="Texture2D" uid="uid://ssyspj46yg8g" path="res://assets/Fondos/cena.jpg" id="2_mfx1q"]
+[ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="3_8kvlj"]
+[ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="4_j82i0"]
+[ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="5_nnx67"]
+
+[sub_resource type="Curve2D" id="Curve2D_20id7"]
+_data = {
+"points": PackedVector2Array(11.1293, -0.209987, -11.1293, 0.209987, 270, -49, -2.61844, 13.2422, 2.61844, -13.2422, 246, -71, -8.79813, -3.98122, 8.79813, 3.98122, 275, -86, -6.71958, -12.1792, 6.71958, 12.1792, 290, -74, 2.51984, -14.6991, -2.51984, 14.6991, 260, -41, -6.2996, -6.50959, 6.2996, 6.50959, 265, -23, -8.39947, 2.09987, 8.39947, -2.09987, 284, -18, 1.67989, 16.379, -1.67989, -16.379, 296, -32, 0, 0, 0, 0, 276, -51, -3.56688, 9.70376, 3.56688, -9.70376, 271, -66, -11.8626, -4.09088, 11.8626, 4.09088, 292, -83, 1.76577, -13.773, -1.76577, 13.773, 302, -62, 0, 0, 0, 0, 273, -49, 4.94416, -10.7712, -4.94416, 10.7712, 248, -42, -7.94597, -8.29913, 7.94597, 8.29913, 248, -20, -11.1244, 4.41443, 11.1244, -4.41443, 268, -20, 0, 9.05747, 0, -9.05747, 281, -38, 0, 0, 0, 0, 273, -48, 0, 0, 0, 0, 270, -49)
+}
+point_count = 19
+
+[node name="Cena" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_faf3o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 658.0
+color = Color(0.054902, 0.054902, 0.054902, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 249.0
+offset_right = 753.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 32
+text = "CENA
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("2_mfx1q")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_20id7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+rotates = false
+script = ExtResource("3_8kvlj")
+
+[node name="Burbuja" parent="Path2D/PathFollow2D" instance=ExtResource("4_j82i0")]
+
+[node name="DraggersBuble" type="Node2D" parent="Path2D/PathFollow2D"]
+
+[node name="DraggesNormal" type="Node2D" parent="."]
+
+[node name="Tenedor" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
+position = Vector2(483, 237)
+dragType = 3
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
+draggersNode = NodePath("..")
+
+[node name="AlbondigaIzq" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
+position = Vector2(-301, 228)
+dragType = 3
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
+draggersNode = NodePath("..")
+
+[node name="AlbondigaDer" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
+position = Vector2(314, 236)
+dragType = 3
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
+draggersNode = NodePath("..")
+
+[node name="Copa" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
+position = Vector2(-464, 228)
+dragType = 3
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
+draggersNode = NodePath("..")
