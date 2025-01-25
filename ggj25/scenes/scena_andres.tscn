@@ -28,18 +28,20 @@ script = ExtResource("2_wvilc")
 position = Vector2(-1.94307, -3.03719)
 rotation = -3.12273
 
-[node name="DragableZone" type="Node2D" parent="."]
+[node name="DraggersBuble" type="Node2D" parent="Path2D/PathFollow2D"]
 
-[node name="Draggable2" parent="DragableZone" node_paths=PackedStringArray("bubbleNode", "dragZoneNode") instance=ExtResource("9_r15lc")]
+[node name="DraggesNormal" type="Node2D" parent="."]
+
+[node name="Draggable2" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("9_r15lc")]
 position = Vector2(94, -232)
 dragType = 3
 Ylimit = 200.0
-bubbleNode = NodePath("../../Path2D/PathFollow2D/Burbuja")
-dragZoneNode = NodePath("..")
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
+draggersNode = NodePath("..")
 
-[node name="Draggable" parent="DragableZone" node_paths=PackedStringArray("bubbleNode", "dragZoneNode") instance=ExtResource("9_r15lc")]
+[node name="Draggable" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("9_r15lc")]
 position = Vector2(-142, -234)
 dragType = 3
 Ylimit = 200.0
-bubbleNode = NodePath("../../Path2D/PathFollow2D/Burbuja")
-dragZoneNode = NodePath("..")
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
+draggersNode = NodePath("..")
