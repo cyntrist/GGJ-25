@@ -18,10 +18,8 @@ init_pos = Vector2(200, 500)
 position = Vector2(332, 215)
 color = Color(0.368627, 0.356863, 0.109804, 1)
 
-[node name="Suelo" type="RigidBody2D" parent="."]
+[node name="Suelo" type="StaticBody2D" parent="."]
 position = Vector2(551, 650)
-gravity_scale = 0.0
-lock_rotation = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo"]
 position = Vector2(27.5, 0)
