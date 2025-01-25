@@ -53,7 +53,7 @@ func _onEnter():
 		var newpath = PATH_PREFAB.instantiate()
 		draggersNodeBubble.add_child(newpath)
 		newpath.get_node("Path2D/PathFollow2D").add_child(get_node("."))
-		#position = get_local_mouse_position()
+		position = Vector2(0,0)
 		print(self.get_path())
 		rotation = 90
 		print("HOLE HOLE")
