@@ -1,0 +1,23 @@
+extends Node2D
+
+@onready var burbuja_mesh: MeshInstance3D = $"3D/SubViewport/DeformableMeshInstance3D"
+@onready var burbuja_collider: CollisionShape2D = $"3D/Area2D/CollisionShape2D"
+@export var base_size: float = 1
+
+var actual_limit
+
+func _ready() -> void:
+	_on_active()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	burbuja_mesh.scale = Vector3(1,1,1) * Global.size_bubble_percent + Vector3(1,1,1) *base_size
+	burbuja_collider.scale =  Vector2(1,1) * Global.size_bubble_percent + Vector2(1,1) * base_size
+
+
+func _on_active():
+	actual_limit = Global.size_bubble_percent + 0.25
+
+func mouse_enter() -> void:
+	if Global.size_bubble_percent < actual_limit:
+		Global.size_bubble_percent += 0.01;

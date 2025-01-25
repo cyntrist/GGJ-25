@@ -16,7 +16,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var ola = get_grab_position() + offset
 	var newpos = Vector3(ola.x, ola.y, 0)
-	spherical_deformer.position = newpos
+	
+	#cambiar con la variable global de estas arrastrando un objeto
+	if Global.is_dragging:
+		spherical_deformer.position = newpos
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
