@@ -5,12 +5,12 @@
 
 [node name="ScenaAndres" type="Node2D"]
 
-[node name="Object" parent="." instance=ExtResource("9_r15lc")]
-position = Vector2(105, -231)
-
-[node name="Object2" parent="." instance=ExtResource("9_r15lc")]
-position = Vector2(-88, -226)
+[node name="Draggable2" parent="." instance=ExtResource("9_r15lc")]
+position = Vector2(94, -232)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Burbuja" parent="." instance=ExtResource("2_1eld3")]
+
+[node name="Draggable" parent="." instance=ExtResource("9_r15lc")]
+position = Vector2(-142, -234)
