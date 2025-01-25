@@ -18,3 +18,10 @@ func _process(delta: float) -> void:
 	elif not aumentado:
 		Global.change_scene(Global.Scenes.MAIN_MENU)
 		aumentado = true
+
+
+func on_enable():
+	pass
+
+func on_disable():
+	pass

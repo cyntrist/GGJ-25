@@ -44,6 +44,9 @@ var credits = [
 		"Nieves Alonso Gilsanz",
 		"Paula Alemany Rodriguez"
 	], [
+		"STORY",
+		"Carmen Gomez Bezerra"
+	], [
 		"SOUND DESIGN",
 		"Ariadna Alicia \"Ari\" Ruiz Castillo"
 	], [

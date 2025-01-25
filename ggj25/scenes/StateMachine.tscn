@@ -1,25 +1,96 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7qrogiqlu6kl"]
+[gd_scene load_steps=21 format=3 uid="uid://c7qrogiqlu6kl"]
 
 [ext_resource type="Script" path="res://scripts/GameStateMachine.gd" id="1_yd1kb"]
 [ext_resource type="PackedScene" uid="uid://01umo3cjmlbt" path="res://scenes/credits_scene.tscn" id="2_0hxui"]
+[ext_resource type="PackedScene" uid="uid://batkjgiqud0xv" path="res://scenes/null_scene.tscn" id="2_ps45i"]
+[ext_resource type="Script" path="res://scripts/null_script.gd" id="3_3jjcy"]
+[ext_resource type="PackedScene" uid="uid://chq2ttpvye2ui" path="res://scenes/picnic_scene.tscn" id="3_8xpak"]
 [ext_resource type="PackedScene" uid="uid://5w0xl8fledrk" path="res://scenes/fade_scene.tscn" id="3_e0ioj"]
+[ext_resource type="PackedScene" uid="uid://mqr3j6tyasd" path="res://scenes/cama_scene.tscn" id="3_hab3e"]
 [ext_resource type="PackedScene" uid="uid://dy4tygucl1fuu" path="res://scenes/main_menu.tscn" id="4_4oy82"]
+[ext_resource type="PackedScene" uid="uid://c5bbxxg2ca853" path="res://scenes/cena_scene.tscn" id="4_bhfeg"]
+[ext_resource type="PackedScene" uid="uid://drfd4ho53yt5b" path="res://scenes/prepostcita_scene.tscn" id="4_cp00l"]
 [ext_resource type="PackedScene" uid="uid://dnysdn0d3o7b2" path="res://scenes/intro_scene.tscn" id="4_eusnl"]
+[ext_resource type="Script" path="res://scripts/scene_scripts/cama.gd" id="4_uxx0w"]
+[ext_resource type="PackedScene" uid="uid://bntoie4b8lq2u" path="res://scenes/cine_scene.tscn" id="5_mwpl3"]
+[ext_resource type="Script" path="res://scripts/scene_scripts/cena.gd" id="6_2d4u1"]
+[ext_resource type="PackedScene" uid="uid://kuee5s7qpvx2" path="res://scenes/context_scene.tscn" id="8_iifg8"]
+[ext_resource type="Script" path="res://scripts/scene_scripts/cine.gd" id="8_mdfim"]
+[ext_resource type="Script" path="res://scripts/scene_scripts/picnic.gd" id="10_njk2b"]
+[ext_resource type="Script" path="res://scripts/scene_scripts/prepostcita.gd" id="12_rd7nq"]
+[ext_resource type="Script" path="res://scripts/scene_scripts/contexto.gd" id="14_60x1f"]
+
+[sub_resource type="GDScript" id="GDScript_un3us"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func on_enable():
+	pass
+
+func on_disable():
+	pass
+"
 
 [node name="StateMachine" type="Node"]
 script = ExtResource("1_yd1kb")
 
-[node name="Intro" parent="." instance=ExtResource("4_eusnl")]
+[node name="Credits" parent="." instance=ExtResource("2_0hxui")]
+process_mode = 4
+visible = false
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Cama" parent="." instance=ExtResource("3_hab3e")]
+process_mode = 4
+visible = false
+script = ExtResource("4_uxx0w")
+
+[node name="Cena" parent="." instance=ExtResource("4_bhfeg")]
+process_mode = 4
+visible = false
+script = ExtResource("6_2d4u1")
+
+[node name="Cine" parent="." instance=ExtResource("5_mwpl3")]
+process_mode = 4
+visible = false
+script = ExtResource("8_mdfim")
+
+[node name="Picnic" parent="." instance=ExtResource("3_8xpak")]
+process_mode = 4
+visible = false
+script = ExtResource("10_njk2b")
+
+[node name="Prepostcita" parent="." instance=ExtResource("4_cp00l")]
+process_mode = 4
+visible = false
+script = ExtResource("12_rd7nq")
+
+[node name="Contexto" parent="." instance=ExtResource("8_iifg8")]
+process_mode = 4
+visible = false
+script = ExtResource("14_60x1f")
 
 [node name="MainMenu" parent="." instance=ExtResource("4_4oy82")]
 process_mode = 4
 visible = false
 offset_left = -6.0
 offset_right = -6.0
+script = SubResource("GDScript_un3us")
 
-[node name="Credits" parent="." instance=ExtResource("2_0hxui")]
+[node name="Intro" parent="." instance=ExtResource("4_eusnl")]
 process_mode = 4
 visible = false
-bg_color = Color(0, 0, 0, 1)
+
+[node name="NullScene" parent="." instance=ExtResource("2_ps45i")]
+visible = false
+script = ExtResource("3_3jjcy")
 
 [node name="FadeScene" parent="." instance=ExtResource("3_e0ioj")]

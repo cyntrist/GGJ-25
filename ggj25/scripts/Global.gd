@@ -2,16 +2,14 @@ extends Node
 # SEÑALES
 signal to_transition
 signal transitioned
+signal on_enable(scene)
+signal on_disable(scene)
 
-enum Scenes { MAIN_MENU, INTRO, CREDITS, CENA, PICNIC, CINE, CAMA, NULL}
+enum Scenes { MAIN_MENU, INTRO, CONTEXTO, PREPOSTCITA, CENA, PICNIC, CINE, CAMA, CREDITS, NULL}
 
 var gms
 var current_scene = Scenes.NULL 
-var next_scene = Scenes.MAIN_MENU
-
-var size_bubble_percent: float = 0
-
-var is_dragging = false # Para saber si se esta moviendo un objeto.
+var next_scene = Scenes.INTRO
 
 func change_scene(next : Global.Scenes):
 	print("change scene")

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dy4tygucl1fuu"]
+[gd_scene format=3 uid="uid://bntoie4b8lq2u"]
 
-[node name="MainMenu" type="Control"]
+[node name="Cine" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,6 +26,6 @@ offset_top = 249.0
 offset_right = 753.0
 offset_bottom = 360.0
 theme_override_font_sizes/font_size = 32
-text = "MAIN MENU COJOONES"
+text = "CINE"
 horizontal_alignment = 1
 vertical_alignment = 1

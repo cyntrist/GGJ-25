@@ -1,7 +1,14 @@
 extends Node
 
 @onready var mainmenu = $MainMenu
+@onready var nullscene = $NullScene
 @onready var intro = $Intro
+@onready var contexto = $Contexto
+@onready var prepostcita = $Prepostcita
+@onready var cena = $Cena
+@onready var cine = $Cine
+@onready var picnic = $Picnic
+@onready var cama = $Cama
 @onready var credits = $Credits
 @onready var fade = $FadeScene
 
@@ -40,7 +47,6 @@ func _input(event):
 
 
 func _on_transition() -> void: #fade in
-	print("on transitioned")
 	fade.transition()
 
 func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es que esto sea un switch
@@ -48,32 +54,86 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 		 #pass
 	match Global.current_scene:
 		Global.Scenes.NULL:
-			mainmenu.visible = false
-			mainmenu.process_mode = Node.PROCESS_MODE_DISABLED
+			nullscene.visible = false
+			nullscene.on_disable()
+			nullscene.process_mode = Node.PROCESS_MODE_DISABLED
 		Global.Scenes.MAIN_MENU:
 			mainmenu.visible = false
+			mainmenu.on_disable()
 			mainmenu.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.INTRO:
+			intro.visible = false
+			intro.on_disable();
+			intro.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.CONTEXTO:
+			contexto.visible = false
+			contexto.on_disable()
+			contexto.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.PREPOSTCITA:
+			prepostcita.visible = false
+			prepostcita.on_disable()
+			prepostcita.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.CENA:
+			cena.visible = false
+			cena.on_disable()
+			cena.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.PICNIC:
+			picnic.visible = false
+			picnic.on_disable()
+			picnic.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.CINE:
+			cine.visible = false
+			cine.on_disable()
+			cine.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.CAMA:
+			cama.visible = false
+			cama.on_disable()
+			cama.process_mode = Node.PROCESS_MODE_DISABLED
 		Global.Scenes.CREDITS:
 			credits.visible = false
 			credits.process_mode = Node.PROCESS_MODE_DISABLED
-		Global.Scenes.INTRO:
-			intro.visible = false
-			intro.process_mode = Node.PROCESS_MODE_DISABLED
 		_:
 			print(">>> DEFAULT STATE")
 	match Global.next_scene:
 		Global.Scenes.NULL:
-			mainmenu.visible = true
-			mainmenu.process_mode = Node.PROCESS_MODE_INHERIT
+			nullscene.visible = true
+			nullscene.on_enable()
+			nullscene.process_mode = Node.PROCESS_MODE_INHERIT
 		Global.Scenes.MAIN_MENU:
 			mainmenu.visible = true
+			mainmenu.on_enable()
 			mainmenu.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.INTRO:
+			intro.visible = true
+			intro.on_enable()
+			intro.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.CONTEXTO:
+			contexto.visible = true
+			contexto.on_enable()
+			contexto.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.PREPOSTCITA:
+			prepostcita.visible = true
+			prepostcita.on_enable()
+			prepostcita.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.CENA:
+			cena.visible = true
+			cena.on_enable()
+			cena.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.PICNIC:
+			picnic.visible = true
+			picnic.on_enable()
+			picnic.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.CINE:
+			cine.visible = true
+			cine.on_enable()
+			cine.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.CAMA:
+			cama.visible = true
+			cama.on_enable()
+			cama.process_mode = Node.PROCESS_MODE_INHERIT
 		Global.Scenes.CREDITS:
 			credits.visible = true
 			credits.process_mode = Node.PROCESS_MODE_INHERIT
-		Global.Scenes.INTRO:
-			intro.visible = true
-			intro.process_mode = Node.PROCESS_MODE_INHERIT	
 		_:
 			print(">>> DEFAULT STATE")
 	Global.current_scene = Global.next_scene	
