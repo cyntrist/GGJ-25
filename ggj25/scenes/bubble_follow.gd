@@ -1,11 +1,11 @@
 extends PathFollow2D
 
-var speed = 0.1
+var speed = 0.05
 var timer = 0
-var interval = 400
-var min_speed = 0.05
-var max_speed = 0.25
-var speed_factor = 0.0005
+var interval = 400.0
+var min_speed = 0.05/2
+var max_speed = 0.25/2
+var speed_factor = 0.0005/2
 var subir = true
 
 # Called when the node enters the scene tree for the first time.
@@ -17,20 +17,20 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	if (subir):
-		if (timer <= interval):
+		if (timer <= interval/2):
 			timer += 1
 			print("hola")
 			if (speed < max_speed):
 				print("adios")
-				speed += speed_factor
+				speed += speed_factor * 2
 		else:
 			timer = 0
 			subir = false
 	else:
-		if (timer <= interval):
+		if (timer <= interval * 2):
 			timer += 1
 			if (speed > min_speed):
-				speed -= speed_factor
+				speed -= speed_factor 
 		else:
 			timer = 0
 			subir = true
