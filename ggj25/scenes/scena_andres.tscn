@@ -29,7 +29,7 @@ radius = 105.7
 [node name="ScenaAndres" type="Node2D"]
 
 [node name="Object" parent="." instance=ExtResource("9_r15lc")]
-position = Vector2(355, 183)
+position = Vector2(11, -237)
 init_pos = Vector2(355, 183)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -76,6 +76,9 @@ deformers = Array[NodePath]([NodePath("../SphericalDeformer")])
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Burbuja/3D/SubViewport"]
 
 [node name="Area2D" type="Area2D" parent="Burbuja/3D"]
+gravity_space_override = 2
+gravity_point = true
+gravity_point_unit_distance = 3.175
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Burbuja/3D/Area2D"]
 shape = SubResource("CircleShape2D_8oh0n")

@@ -32,5 +32,4 @@ func _onDown():
 func _onUp():
 	is_selected = false
 	Global.is_dragging = false
-	global_position = init_pos # Resetear la posicion
 	#print("Despulsado")
