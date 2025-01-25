@@ -3,7 +3,7 @@ extends Node2D
 var is_selected = false # Para saber si esta seleccionado y moverlo.
 
 const text1 = preload("res://icon.svg")
-
+signal picked
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,13 +19,11 @@ func _process(delta):
 func _onDown():
 	is_selected = true
 	Global.is_dragging = true
+	picked.emit()
 	#print("Pulsado")
-
 
 # Para cuando se deja de pulsar.
 func _onUp():
 	is_selected = false
 	Global.is_dragging = false
-	
-	
 	#print("Despulsado")
