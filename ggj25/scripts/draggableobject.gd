@@ -1,10 +1,10 @@
 extends Node2D
 
 var is_selected = false # Para saber si esta seleccionado y moverlo.
+var maxPercent = 10
+var elapsedPercent = 0
 
-const text1 = preload("res://icon.svg")
-@onready var rigid_body_2d: RigidBody2D = $RigidBody2D
-@onready var spherical_deformer: MeshInstance3D = $SphericalDeformer
+@export var Ylimit : float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,7 +14,11 @@ func _ready():
 func _process(delta):
 	# Mover el objeto.
 	if is_selected:
-		$RigidBody2D.global_position = get_global_mouse_position()
+		global_position = get_global_mouse_position()
+	elif global_position.y < Ylimit:
+		if elapsedPercent <maxPercent:
+			elapsedPercent += 0.1
+		global_position.y += elapsedPercent
 
 # Para cuando se pulsa.
 func _onDown():
@@ -24,7 +28,7 @@ func _onDown():
 
 # Para cuando se deja de pulsar.
 func _onUp():
-	$RigidBody2D.linear_velocity = Vector2(0,0)
 	is_selected = false
 	Global.is_dragging = false
+	elapsedPercent = 0
 	#print("Despulsado")

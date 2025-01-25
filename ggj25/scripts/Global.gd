@@ -14,6 +14,6 @@ var size_bubble_percent = 0
 var is_dragging
 
 func change_scene(next : Global.Scenes, force = true):
-    if (current_scene != next || force):
-        Global.next_scene = next
-        Global.to_transition.emit()
+	if (current_scene != next || force):
+		Global.next_scene = next
+		Global.to_transition.emit()
