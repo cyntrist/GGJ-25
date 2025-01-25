@@ -6,9 +6,10 @@ var elapsedPercent = 0
 var dentro = false
 
 @export var dragType : int 
-@export var Ylimit : float
+@export var Ylimit : float = 550
 @export var draggersNodeBubble: Node2D
 @export var draggersNode: Node2D
+const PATH_PREFAB = preload("res://prefabs/path_prefab.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,6 +40,7 @@ func _onUp():
 		get_parent().remove_child(get_node("."))
 		draggersNode.add_child(get_node("."))
 		dentro = false
+		rotation = 0
 		global_position = get_global_mouse_position()
 		print(get_parent().name)
 	#print("Despulsado")
@@ -48,7 +50,12 @@ func _onEnter():
 	if dragType == 3 && not dentro:
 		dentro = true
 		get_parent().remove_child(get_node("."))
-		draggersNodeBubble.add_child(get_node("."))
+		var newpath = PATH_PREFAB.instantiate()
+		draggersNodeBubble.add_child(newpath)
+		newpath.get_node("Path2D/PathFollow2D").add_child(get_node("."))
+		#position = get_local_mouse_position()
+		print(self.get_path())
+		rotation = 90
 		print("HOLE HOLE")
 	pass
 

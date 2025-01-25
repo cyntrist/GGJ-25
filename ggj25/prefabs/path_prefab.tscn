@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://u55hxa1e0t2r"]
+[gd_scene load_steps=3 format=3 uid="uid://u55hxa1e0t2r"]
+
+[ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="1_mmmxp"]
 
 [sub_resource type="Curve2D" id="Curve2D_jc3mb"]
 _data = {
@@ -13,3 +15,4 @@ curve = SubResource("Curve2D_jc3mb")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 rotation = -0.844154
+script = ExtResource("1_mmmxp")
