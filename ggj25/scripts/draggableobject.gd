@@ -6,7 +6,7 @@ var elapsedPercent = 0
 var dentro = false
 
 @export var dragType : int 
-@export var Ylimit : float = 550
+@export var Ylimit : float = 200
 @export var draggersNodeBubble: Node2D
 @export var draggersNode: Node2D
 const PATH_PREFAB = preload("res://prefabs/path_prefab.tscn")

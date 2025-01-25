@@ -65,6 +65,7 @@ color = Color(0.368627, 0.356863, 0.109804, 1)
 curve = SubResource("Curve2D_hpmpf")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(270, -49)
 rotates = false
 script = ExtResource("5_naubm")
 

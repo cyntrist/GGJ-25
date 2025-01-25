@@ -8,7 +8,7 @@ size = Vector2(134, 133)
 
 [sub_resource type="Animation" id="Animation_lslib"]
 resource_name = "prov_bird_anim"
-length = 5.0
+length = 10.0
 loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -17,9 +17,9 @@ tracks/0/path = NodePath(".:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1280, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(918, -0.25, 0, 0.25, 0, 67, -0.25, 0, 0.25, 0, -746, -0.25, 0, 0.25, 0, -746, -0.25, 0, 0.25, 0, -13, -0.25, 0, 0.25, 0, 990, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2, 4, 5, 6)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -28,9 +28,9 @@ tracks/1/path = NodePath(".:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-127, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-356, -0.25, 0, 0.25, 0, -140, -0.25, 0, 0.25, 0, -397, -0.25, 0, 0.25, 0, -397, -0.25, 0, 0.25, 0, -127, -0.25, 0, 0.25, 0, -432, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2, 4, 5, 6)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -39,9 +39,9 @@ tracks/2/path = NodePath(".:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-0.2683, -0.25, 0, 0.25, 0, -0.099353, -0.25, 0, 0.25, 0, 0.202845, -0.25, 0, 0.25, 0, -2.53663, -0.25, 0, 0.25, 0, -2.87929, -0.25, 0, 0.25, 0, -3.3966, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2, 4, 5, 6)
 }
 
 [sub_resource type="Animation" id="Animation_1wr88"]
@@ -91,7 +91,6 @@ position = Vector2(1280, -127)
 script = ExtResource("1_ah3ph")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1278, 120.5)
 shape = SubResource("RectangleShape2D_piiig")
 
 [node name="Button" type="Button" parent="."]

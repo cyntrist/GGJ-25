@@ -53,6 +53,7 @@ texture = ExtResource("2_w31d4")
 curve = SubResource("Curve2D_0mhya")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(270, -49)
 rotation = 3.12273
 rotates = false
 script = ExtResource("3_hqd0d")
