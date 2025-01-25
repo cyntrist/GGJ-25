@@ -4,6 +4,8 @@ var is_selected = false # Para saber si esta seleccionado y moverlo.
 
 const text1 = preload("res://icon.svg")
 signal picked
+@onready var rigid_body_2d: RigidBody2D = $RigidBody2D
+@onready var spherical_deformer: MeshInstance3D = $SphericalDeformer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,6 +26,7 @@ func _onDown():
 
 # Para cuando se deja de pulsar.
 func _onUp():
+	$RigidBody2D.linear_velocity = Vector2(0,0)
 	is_selected = false
 	Global.is_dragging = false
 	#print("Despulsado")
