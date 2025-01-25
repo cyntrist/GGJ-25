@@ -26,9 +26,6 @@ func _process(delta: float) -> void:
 	burbuja_mesh.scale = burbuja_mesh.scale.lerp(next_scale1, delta * SCALE_STEP)
 	burbuja_collider.scale = burbuja_collider.scale.lerp(next_scale2, delta * SCALE_STEP)
 	pass
-	# scale1 = Vector3(1,1,1) * Global.size_bubble_percent
-	# scale2 =  Vector2(1,1) * Global.size_bubble_percent
-
 
 func _on_active():
 	actual_limit = Global.size_bubble_percent + 0.25
