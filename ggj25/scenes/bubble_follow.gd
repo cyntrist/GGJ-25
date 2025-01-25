@@ -19,9 +19,7 @@ func _process(delta: float) -> void:
 	if (subir):
 		if (timer <= interval/2):
 			timer += 1
-			print("hola")
 			if (speed < max_speed):
-				print("adios")
 				speed += speed_factor * 2
 		else:
 			timer = 0
