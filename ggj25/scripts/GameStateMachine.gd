@@ -47,6 +47,9 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 	#if Global.current_scene == Global.to_scene:
 		 #pass
 	match Global.current_scene:
+		Global.Scenes.NULL:
+			mainmenu.visible = false
+			mainmenu.process_mode = Node.PROCESS_MODE_DISABLED
 		Global.Scenes.MAIN_MENU:
 			mainmenu.visible = false
 			mainmenu.process_mode = Node.PROCESS_MODE_DISABLED
@@ -59,6 +62,9 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 		_:
 			print(">>> DEFAULT STATE")
 	match Global.next_scene:
+		Global.Scenes.NULL:
+			mainmenu.visible = true
+			mainmenu.process_mode = Node.PROCESS_MODE_INHERIT
 		Global.Scenes.MAIN_MENU:
 			mainmenu.visible = true
 			mainmenu.process_mode = Node.PROCESS_MODE_INHERIT
