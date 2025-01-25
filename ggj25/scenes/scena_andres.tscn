@@ -28,6 +28,10 @@ radius = 105.7
 
 [node name="ScenaAndres" type="Node2D"]
 
+[node name="Object" parent="." instance=ExtResource("9_r15lc")]
+position = Vector2(355, 183)
+init_pos = Vector2(355, 183)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Burbuja" type="Node2D" parent="."]
@@ -76,8 +80,4 @@ deformers = Array[NodePath]([NodePath("../SphericalDeformer")])
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Burbuja/3D/Area2D"]
 shape = SubResource("CircleShape2D_8oh0n")
 
-[node name="Object" parent="." instance=ExtResource("9_r15lc")]
-position = Vector2(355, 183)
-init_pos = Vector2(355, 183)
-
-[connection signal="mouse_entered" from="Burbuja/3D/Area2D" to="Burbuja" method="mouse_enter"]
+[connection signal="area_entered" from="Burbuja/3D/Area2D" to="Burbuja" method="_area_enter"]

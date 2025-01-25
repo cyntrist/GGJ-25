@@ -10,6 +10,8 @@ enum Scenes { MAIN_MENU, INTRO, CONTEXTO, PREPOSTCITA, CENA, PICNIC, CINE, CAMA,
 var gms
 var current_scene = Scenes.NULL 
 var next_scene = Scenes.INTRO
+var size_bubble_percent = 0
+var is_dragging
 
 func change_scene(next : Global.Scenes):
 	print("change scene")

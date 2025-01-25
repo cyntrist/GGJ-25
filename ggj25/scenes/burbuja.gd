@@ -6,7 +6,7 @@ extends Node2D
 
 var actual_limit
 
-func _ready() -> void:
+func _ready() -> void: 
 	_on_active()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,6 +18,6 @@ func _process(delta: float) -> void:
 func _on_active():
 	actual_limit = Global.size_bubble_percent + 0.25
 
-func mouse_enter() -> void:
+func _area_enter(area: Area2D) -> void:
 	if Global.size_bubble_percent < actual_limit:
 		Global.size_bubble_percent += 0.01;

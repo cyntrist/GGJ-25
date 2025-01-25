@@ -137,4 +137,3 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 		_:
 			print(">>> DEFAULT STATE")
 	Global.current_scene = Global.next_scene	
-
