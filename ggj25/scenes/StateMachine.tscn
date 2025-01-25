@@ -90,3 +90,11 @@ visible = false
 script = ExtResource("3_3jjcy")
 
 [node name="FadeScene" parent="." instance=ExtResource("3_e0ioj")]
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+
+[node name="SFX1" type="AudioStreamPlayer2D" parent="."]
+
+[node name="SFX2" type="AudioStreamPlayer2D" parent="."]
+
+[node name="SFX3" type="AudioStreamPlayer2D" parent="."]

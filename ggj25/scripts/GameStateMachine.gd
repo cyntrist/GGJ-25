@@ -12,6 +12,11 @@ extends Node
 @onready var credits = $Credits
 @onready var fade = $FadeScene
 
+@onready var bgm: AudioStreamPlayer2D = $BGM
+@onready var sfx_1: AudioStreamPlayer2D = $SFX1
+@onready var sfx_2: AudioStreamPlayer2D = $SFX2
+@onready var sfx_3: AudioStreamPlayer2D = $SFX3
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.gms = self
