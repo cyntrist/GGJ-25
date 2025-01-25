@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://c7qrogiqlu6kl"]
+[gd_scene load_steps=6 format=3 uid="uid://c7qrogiqlu6kl"]
+
+[ext_resource type="Script" path="res://scripts/GameStateMachine.gd" id="1_yd1kb"]
+[ext_resource type="PackedScene" uid="uid://01umo3cjmlbt" path="res://scenes/credits_scene.tscn" id="2_0hxui"]
+[ext_resource type="PackedScene" uid="uid://5w0xl8fledrk" path="res://scenes/fade_scene.tscn" id="3_e0ioj"]
+[ext_resource type="PackedScene" uid="uid://dy4tygucl1fuu" path="res://scenes/main_menu.tscn" id="4_4oy82"]
+[ext_resource type="PackedScene" uid="uid://dnysdn0d3o7b2" path="res://scenes/intro_scene.tscn" id="4_eusnl"]
 
 [node name="StateMachine" type="Node"]
+script = ExtResource("1_yd1kb")
+
+[node name="Intro" parent="." instance=ExtResource("4_eusnl")]
+
+[node name="MainMenu" parent="." instance=ExtResource("4_4oy82")]
+process_mode = 4
+visible = false
+offset_left = -6.0
+offset_right = -6.0
+
+[node name="Credits" parent="." instance=ExtResource("2_0hxui")]
+process_mode = 4
+visible = false
+bg_color = Color(0, 0, 0, 1)
+
+[node name="FadeScene" parent="." instance=ExtResource("3_e0ioj")]
