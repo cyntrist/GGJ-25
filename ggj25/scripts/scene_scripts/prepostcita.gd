@@ -52,30 +52,36 @@ func _input(event):
 				0: # estas en la precena y vas a la cena
 					Global.change_scene(Global.Scenes.CENA)
 					#Global.change_scene(Global.Scenes.PREPOSTCITA)
-					pass
+					Global.next_stage()
+					return
 				1: # estas en la poscena y vas al precine
 					Global.change_scene(Global.Scenes.PREPOSTCITA)
-					pass
+					Global.next_stage()
+					return
 				2: # estas en el precine y vas al cine
 					Global.change_scene(Global.Scenes.CINE)
+					Global.next_stage()
+					return
 					#Global.change_scene(Global.Scenes.PREPOSTCITA)
-					pass
 				3: # estas en el poscine y vas al prepicninc
 					Global.change_scene(Global.Scenes.PREPOSTCITA)
-					pass
+					Global.next_stage()
+					return
 				4: # estas en el prepicnic y vas al picnic
 					Global.change_scene(Global.Scenes.PICNIC)
+					Global.next_stage()
+					return
 					#Global.change_scene(Global.Scenes.PREPOSTCITA)
-					pass
 				5: # estas en el pospicnic y vas a la precama
 					Global.change_scene(Global.Scenes.PREPOSTCITA)
-					pass
+					Global.next_stage()
+					return
 				6: # estas en el precama y vas a la cama
 					Global.change_scene(Global.Scenes.CAMA)
-					pass
+					Global.next_stage()
+					return
 				_:
 					print("PROBLEMA EN PREPOSTCITA")
-			Global.next_stage()
 
 
 
