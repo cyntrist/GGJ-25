@@ -21,7 +21,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if stop:
 		label.visible_ratio =  1
+		text_ended = true
 	elif elapsedTime <= maxTime:
+		if label.visible_ratio == 1:
+			text_ended = true
 		if textDisplay < 1:
 			#if timer >= frames_per_letter:
 			timer = 0
@@ -41,8 +44,25 @@ func _input(event):
 			stop = true;
 			text_ended = true;
 		else:
+			match Global.stage:
+				0: # estas en la precena y vas a la cena
+					Global.change_scene(Global.Scenes.CENA)
+				1: # estas en la poscena y vas al precine
+					Global.change_scene(Global.Scenes.PREPOSTCITA)
+				2: # estas en el precine y vas al cine
+					Global.change_scene(Global.Scenes.CINE)
+				3: # estas en el poscine y vas al prepicninc
+					Global.change_scene(Global.Scenes.PREPOSTCITA)
+				4: # estas en el prepicnic y vas al picnic
+					Global.change_scene(Global.Scenes.PICNIC)
+				5: # estas en el pospicnic y vas a la precama
+					Global.change_scene(Global.Scenes.PREPOSTCITA)
+				6: # estas en el precama y vas a la cama
+					Global.change_scene(Global.Scenes.CAMA)
+				_:
+					print("PROBLEMA EN PREPOSTCITA")
 			Global.next_stage()
-			Global.change_scene(Global.Scenes.PREPOSTCITA)
+
 
 
 func on_enable():
