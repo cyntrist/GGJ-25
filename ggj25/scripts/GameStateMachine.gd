@@ -22,6 +22,7 @@ func _ready() -> void:
 	Global.gms = self
 	# Global.to_transition.connect(_on_totransition)
 	Global.transitioned.connect(_on_fade_scene_transitioned)
+	Global.on_end.connect(_on_end)
 	pass # Replace with function body.
 
 
@@ -61,6 +62,10 @@ func _input(event):
 # @onready var sfx: AudioStreamPlayer2D = $SFX
 # @onready var sfx_2: AudioStreamPlayer2D = $SFX2
 
+func _on_end():
+	sfx_3.stream = load("res://sonido/pop.mp3")
+	sfx_3.play()
+	Global.change_scene(Global.Scenes.CREDITS)
 
 func _on_transition() -> void: #fade in
 	fade.transition()
