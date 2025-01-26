@@ -87,6 +87,10 @@ click={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://localizacion/lisensiado.csv", "res://localizacion/lisensiado.en.translation", "res://localizacion/lisensiado.es.translation")
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.054902, 0.054902, 0.054902, 1)
