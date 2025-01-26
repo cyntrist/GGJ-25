@@ -14,4 +14,5 @@ func on_enable():
 	pass
 
 func on_disable():
+	Global.next_stage()
 	pass
