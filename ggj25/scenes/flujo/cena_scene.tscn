@@ -74,8 +74,11 @@ nextScene = 3
 
 [node name="Tenedor" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("5_nnx67")]
 position = Vector2(232, 222)
+dragType = null
+Ylimit = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
+offset = null
 
 [node name="Button" parent="DraggesNormal/Tenedor" index="2"]
 offset_left = -68.0
@@ -89,8 +92,10 @@ icon = ExtResource("6_5psg5")
 [node name="AlbondigaIzq" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("5_nnx67")]
 position = Vector2(-107, 220)
 dragType = 3
+Ylimit = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
+offset = null
 
 [node name="Button" parent="DraggesNormal/AlbondigaIzq" index="2"]
 offset_left = -60.0
@@ -102,8 +107,10 @@ icon = ExtResource("7_x8a43")
 [node name="AlbondigaDer" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("5_nnx67")]
 position = Vector2(48, 228)
 dragType = 3
+Ylimit = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
+offset = null
 
 [node name="Button" parent="DraggesNormal/AlbondigaDer" index="2"]
 scale = Vector2(0.152157, 0.152157)
@@ -112,8 +119,10 @@ icon = ExtResource("7_x8a43")
 [node name="Copa" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("5_nnx67")]
 position = Vector2(-283, 219)
 dragType = 3
+Ylimit = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
+offset = null
 
 [node name="Button" parent="DraggesNormal/Copa" index="2"]
 offset_top = -121.0

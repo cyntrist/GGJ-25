@@ -72,6 +72,8 @@ position = Vector2(-3, -2)
 [node name="Gafas" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("4_olom6")]
 position = Vector2(405, 210)
 dragType = 2
+Ylimit = null
+offset = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
 
@@ -85,6 +87,8 @@ icon = ExtResource("5_xrqoh")
 [node name="Palomita" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("4_olom6")]
 position = Vector2(-536, 22)
 dragType = 3
+Ylimit = null
+offset = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
 
@@ -98,6 +102,9 @@ icon = ExtResource("6_rpc42")
 
 [node name="Palomias" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("4_olom6")]
 position = Vector2(-485, 227)
+dragType = null
+Ylimit = null
+offset = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
 
