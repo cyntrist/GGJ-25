@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ivnstgh8b27e"]
+[gd_scene load_steps=6 format=3 uid="uid://bq430wv8sacg"]
 
 [ext_resource type="FontFile" uid="uid://cvuafexs3oeis" path="res://assets/fonts/meddon.ttf" id="1_frux4"]
 [ext_resource type="Texture2D" uid="uid://dfhpxc8fyj13e" path="res://assets/Fondos/fondo.png" id="3_2ud1y"]
@@ -35,13 +35,13 @@ texture = ExtResource("3_2ud1y")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 10.0
-offset_right = 1137.0
-offset_bottom = 628.0
+offset_left = 103.0
+offset_top = 202.0
+offset_right = 1055.0
+offset_bottom = 740.0
 theme = ExtResource("4_f7o7e")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 20
 text = "Prefollar"
 horizontal_alignment = 1
 autowrap_mode = 2

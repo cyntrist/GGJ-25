@@ -50,6 +50,7 @@ func _input(event):
 
 
 func on_enable():
+	label.text = tr("PREFOLLARDOS")
 	pass
 
 func on_disable():
