@@ -66,6 +66,7 @@ script = ExtResource("3_8kvlj")
 
 [node name="Burbuja" parent="Path2D/PathFollow2D" instance=ExtResource("4_j82i0")]
 rotation = -3.12273
+nextScene = 3
 
 [node name="DraggersBuble" type="Node2D" parent="Path2D/PathFollow2D"]
 
