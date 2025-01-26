@@ -1,12 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfa8uubvanr3d"]
+[gd_scene load_steps=13 format=3 uid="uid://dfa8uubvanr3d"]
 
 [ext_resource type="Texture2D" uid="uid://06dek1iduwb4" path="res://assets/Fondos/picnic.jpg" id="1_ogovi"]
 [ext_resource type="Texture2D" uid="uid://blaqawhmbu56j" path="res://assets/Fondos/papel.png" id="2_iwl5s"]
 [ext_resource type="PackedScene" uid="uid://pevvpd2ouetn" path="res://scenes/picnic_paper.tscn" id="3_510cx"]
 [ext_resource type="PackedScene" uid="uid://djppmmhmacox3" path="res://scenes/prov_bird.tscn" id="4_nw8xa"]
+[ext_resource type="Texture2D" uid="uid://c2fvayqi7t3ir" path="res://assets/img/pajaro_volando.png" id="4_war1b"]
 [ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="5_naubm"]
 [ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="6_f7rxe"]
 [ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="7_0o074"]
+[ext_resource type="Texture2D" uid="uid://cegomsmmgn4ql" path="res://assets/img/pincel.png" id="8_oc1eg"]
+[ext_resource type="Texture2D" uid="uid://b2n2pry2j3u6d" path="res://assets/img/zumo.png" id="9_asqdg"]
 
 [sub_resource type="Curve2D" id="Curve2D_6uuwt"]
 _data = {
@@ -59,6 +62,14 @@ texture = ExtResource("2_iwl5s")
 
 [node name="prov_bird" parent="." instance=ExtResource("4_nw8xa")]
 
+[node name="Button" parent="prov_bird" index="1"]
+offset_left = -78.0
+offset_top = -66.0
+offset_right = 1428.0
+offset_bottom = 1034.0
+scale = Vector2(0.119995, 0.119995)
+icon = ExtResource("4_war1b")
+
 [node name="Papel" parent="." instance=ExtResource("3_510cx")]
 position = Vector2(317, 148)
 color = Color(0.368627, 0.356863, 0.109804, 1)
@@ -82,16 +93,32 @@ rotation = -3.12273
 position = Vector2(-3, -2)
 
 [node name="Pincel" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("7_0o074")]
-position = Vector2(-318, 233)
+position = Vector2(-271, 233)
 dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
+
+[node name="Button" parent="DraggesNormal/Pincel" index="2"]
+offset_left = 71.0
+offset_top = -223.0
+offset_right = 1690.0
+offset_bottom = 165.0
+rotation = 1.71981
+scale = Vector2(0.200001, 0.200001)
+icon = ExtResource("8_oc1eg")
 
 [node name="Referesco" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("7_0o074")]
 position = Vector2(-474, 231)
 dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
+
+[node name="Button" parent="DraggesNormal/Referesco" index="2"]
+offset_top = -187.0
+offset_right = 956.0
+offset_bottom = 1442.0
+scale = Vector2(0.16, 0.16)
+icon = ExtResource("9_asqdg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -116,3 +143,7 @@ position = Vector2(579, 15)
 rotation = 1.5708
 scale = Vector2(60, 1)
 shape = SubResource("RectangleShape2D_68pr1")
+
+[editable path="prov_bird"]
+[editable path="DraggesNormal/Pincel"]
+[editable path="DraggesNormal/Referesco"]

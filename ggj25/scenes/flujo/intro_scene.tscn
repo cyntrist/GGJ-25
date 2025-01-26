@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnysdn0d3o7b2"]
+[gd_scene load_steps=3 format=3 uid="uid://dnysdn0d3o7b2"]
 
 [ext_resource type="Script" path="res://scripts/intro.gd" id="1_bqrie"]
+[ext_resource type="Texture2D" uid="uid://cpjaalgwoidff" path="res://assets/img/alcancilito.png" id="2_w86hu"]
 
 [node name="Intro" type="Control"]
 layout_mode = 3
@@ -20,6 +21,15 @@ offset_top = -565.0
 offset_right = 977.0
 offset_bottom = 559.0
 color = Color(0.054902, 0.054902, 0.054902, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -151.0
+offset_top = -236.0
+offset_right = 1139.0
+offset_bottom = 1490.0
+scale = Vector2(0.239999, 0.239999)
+texture = ExtResource("2_w86hu")
 
 [node name="Control" type="Control" parent="."]
 anchors_preset = 0
@@ -47,10 +57,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -341.5
-offset_top = 54.0
-offset_right = 341.5
-offset_bottom = 145.0
+offset_left = -341.0
+offset_top = 160.0
+offset_right = 342.0
+offset_bottom = 251.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50

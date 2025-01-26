@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://sraxxrvyh58f"]
+[gd_scene load_steps=10 format=3 uid="uid://sraxxrvyh58f"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/cena.gd" id="1_faf3o"]
 [ext_resource type="Texture2D" uid="uid://ssyspj46yg8g" path="res://assets/Fondos/cena.jpg" id="2_mfx1q"]
 [ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="3_8kvlj"]
 [ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="4_j82i0"]
 [ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="5_nnx67"]
+[ext_resource type="Texture2D" uid="uid://bthi1d0emlpi6" path="res://assets/img/tenedor.png" id="6_5psg5"]
+[ext_resource type="Texture2D" uid="uid://dl5ihskw7bwy0" path="res://assets/img/almondiga.png" id="7_x8a43"]
 
 [sub_resource type="Curve2D" id="Curve2D_3gq8d"]
 _data = {
@@ -70,28 +72,55 @@ rotation = -3.12273
 [node name="DraggesNormal" type="Node2D" parent="."]
 
 [node name="Tenedor" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
-position = Vector2(470, 229)
+position = Vector2(232, 222)
 dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
+
+[node name="Button" parent="DraggesNormal/Tenedor" index="2"]
+offset_left = -68.0
+offset_top = -168.0
+offset_right = 1548.0
+offset_bottom = 216.0
+rotation = 0.919888
+scale = Vector2(0.200001, 0.200001)
+icon = ExtResource("6_5psg5")
 
 [node name="AlbondigaIzq" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
-position = Vector2(-314, 220)
+position = Vector2(-107, 220)
 dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
+
+[node name="Button" parent="DraggesNormal/AlbondigaIzq" index="2"]
+offset_left = -60.0
+offset_right = 906.0
+offset_bottom = 876.0
+scale = Vector2(0.144172, 0.148353)
+icon = ExtResource("7_x8a43")
 
 [node name="AlbondigaDer" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
-position = Vector2(301, 228)
+position = Vector2(48, 228)
 dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
 
+[node name="Button" parent="DraggesNormal/AlbondigaDer" index="2"]
+scale = Vector2(0.152157, 0.152157)
+icon = ExtResource("7_x8a43")
+
 [node name="Copa" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("5_nnx67")]
-position = Vector2(-477, 220)
+position = Vector2(-283, 219)
 dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
+
+[node name="Button" parent="DraggesNormal/Copa" index="2"]
+offset_top = -121.0
+offset_right = 956.0
+offset_bottom = 1508.0
+scale = Vector2(0.138935, 0.146624)
+icon = ExtResource("7_x8a43")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -116,3 +145,8 @@ position = Vector2(579, 15)
 rotation = 1.5708
 scale = Vector2(60, 1)
 shape = SubResource("RectangleShape2D_256bl")
+
+[editable path="DraggesNormal/Tenedor"]
+[editable path="DraggesNormal/AlbondigaIzq"]
+[editable path="DraggesNormal/AlbondigaDer"]
+[editable path="DraggesNormal/Copa"]
