@@ -115,10 +115,10 @@ texture = ExtResource("3_snv0t")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 90.0
-offset_top = 71.0
-offset_right = 1052.0
-offset_bottom = 560.0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 1142.0
+offset_bottom = 634.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_pn076")
 theme_override_font_sizes/font_size = 32
