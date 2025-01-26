@@ -65,7 +65,7 @@ script = ExtResource("3_hqd0d")
 
 [node name="Burbuja" parent="Path2D/PathFollow2D" instance=ExtResource("4_x0mlk")]
 rotation = -3.12273
-base_size_collider = 2.0
+base_size_collider = 0.25
 nextScene = 8
 
 [node name="DraggesNormal" type="Node2D" parent="."]
