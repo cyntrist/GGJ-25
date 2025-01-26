@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://sraxxrvyh58f"]
+[gd_scene load_steps=10 format=3 uid="uid://sraxxrvyh58f"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/cena.gd" id="1_faf3o"]
 [ext_resource type="Texture2D" uid="uid://ssyspj46yg8g" path="res://assets/Fondos/cena.jpg" id="2_mfx1q"]
 [ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="3_8kvlj"]
 [ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="4_j82i0"]
 [ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="5_nnx67"]
+[ext_resource type="AudioStream" uid="uid://ef6rc64lnwjr" path="res://sonido/restaurantAmbience.mp3" id="6_op7es"]
+[ext_resource type="AudioStream" uid="uid://be8la6uuu1vj7" path="res://sonido/DinnerDate.mp3" id="7_pvxj7"]
 
 [sub_resource type="Curve2D" id="Curve2D_3gq8d"]
 _data = {
@@ -13,6 +15,7 @@ _data = {
 point_count = 19
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_256bl"]
+size = Vector2(20, 80)
 
 [node name="Cena" type="Control"]
 layout_mode = 3
@@ -93,26 +96,54 @@ dragType = 3
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
 
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(6, 350)
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_256bl")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1, 318)
-scale = Vector2(60, 1)
-shape = SubResource("RectangleShape2D_256bl")
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-573, 6)
+position = Vector2(-607, -44)
 rotation = 1.5708
 scale = Vector2(60, 1)
 shape = SubResource("RectangleShape2D_256bl")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(6, -313)
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-10, -347)
 scale = Vector2(60, 1)
 shape = SubResource("RectangleShape2D_256bl")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(579, 15)
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(608, -65)
 rotation = 1.5708
 scale = Vector2(60, 1)
 shape = SubResource("RectangleShape2D_256bl")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-784, 0)
+stream = ExtResource("6_op7es")
+volume_db = 10.0
+autoplay = true
+attenuation = 1.86607
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(866, 0)
+stream = ExtResource("6_op7es")
+volume_db = 5.0
+autoplay = true
+attenuation = 6.49802
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_pvxj7")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
