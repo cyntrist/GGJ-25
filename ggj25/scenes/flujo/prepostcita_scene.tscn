@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://drfd4ho53yt5b"]
+[gd_scene load_steps=6 format=3 uid="uid://drfd4ho53yt5b"]
 
 [ext_resource type="FontFile" uid="uid://cvuafexs3oeis" path="res://assets/fonts/meddon.ttf" id="1_dktv8"]
 [ext_resource type="Script" path="res://scripts/scene_scripts/prepostcita.gd" id="1_jhwqc"]
 [ext_resource type="Texture2D" uid="uid://dfhpxc8fyj13e" path="res://assets/Fondos/fondo.png" id="2_p2hip"]
+[ext_resource type="Theme" uid="uid://clrlu3f44drqk" path="res://theme/style.tres" id="4_4xflf"]
 
 [sub_resource type="Theme" id="Theme_c41h2"]
 default_font = ExtResource("1_dktv8")
@@ -37,9 +38,9 @@ offset_left = 90.0
 offset_top = 71.0
 offset_right = 1052.0
 offset_bottom = 560.0
+theme = ExtResource("4_4xflf")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
-text = "PREPOSTCITA
-"
+text = "Preposcita"
 horizontal_alignment = 1
 autowrap_mode = 2

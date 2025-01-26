@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://brwuepfvsl0fr" path="res://assets/Fondos/nacimiento.png" id="2_lvmgo"]
 [ext_resource type="Texture2D" uid="uid://dfhpxc8fyj13e" path="res://assets/Fondos/fondo.png" id="3_snv0t"]
 [ext_resource type="AudioStream" uid="uid://c2mug16efggx" path="res://sonido/Mainmenutheme.mp3" id="3_wggdh"]
-[ext_resource type="FontFile" uid="uid://gw8bpv5rucdk" path="res://assets/fonts/yuji.ttf" id="3_xpypl"]
+[ext_resource type="FontFile" uid="uid://cvuafexs3oeis" path="res://assets/fonts/meddon.ttf" id="4_pn076"]
 
 [sub_resource type="Animation" id="Animation_f2rc0"]
 length = 0.001
@@ -119,10 +119,9 @@ offset_top = 71.0
 offset_right = 1052.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("3_xpypl")
+theme_override_fonts/font = ExtResource("4_pn076")
 theme_override_font_sizes/font_size = 32
-text = "CONTEXTO
-"
+text = "Contexto"
 horizontal_alignment = 1
 autowrap_mode = 2
 

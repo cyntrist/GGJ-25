@@ -14,11 +14,11 @@ var stop = false
 var transitioned = false
 @export var first_font : FontFile = null
 @export var second_font : FontFile = null
-
+var theme
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	label.set("theme_override_fonts/font", first_font)
+	theme = label.theme
 	pass # Replace with function body.
 
 
@@ -99,22 +99,18 @@ func on_enable():
 			pass
 		3: # poscine
 			string = "Poscine"
-			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		4: # prepicnic
 			string = "Prepicnic"
-			label.set("theme_override_fonts/font", first_font)
 
 			pass
 		5: # pospicnic
 			string = "Pospicnic"
-			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		6: # precama
 			string = "Precama"
-			label.set("theme_override_fonts/font", first_font)
 			pass
 	label.text = string
 	pass
