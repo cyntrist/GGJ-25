@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 
 	burbuja_mesh.scale = burbuja_mesh.scale.lerp(next_scale1, delta * SCALE_STEP)
 	burbuja_collider.scale = burbuja_collider.scale.lerp(next_scale2, delta * SCALE_STEP)
-	pass
+	$"3D/RigidBody2D/CollisionShape2D".scale = burbuja_collider.scale.lerp(next_scale2, delta * SCALE_STEP)
 
 func _on_active():
 	actual_limit = Global.size_bubble_percent + 0.25
@@ -37,23 +37,24 @@ func _on_active():
 func _area_enter(area: Area2D) -> void:
 	print("COLISION")
 	if area.name == "DragAr":
-		match area.get_parent().dragType:
-			0:
-				print("Deformable")
-			1:
-				print("Pintable")
-				if Global.r_change > color_r/255:
-					Global.r_change -= 0.02
-				if Global.g_change > color_g/255:
-					Global.g_change -= 0.02
-				if Global.b_change > color_b/255:
-					Global.b_change -= 0.02
-				$rendering/Pompa.modulate = Color(Global.r_change, Global.g_change, Global.b_change, 1)
-			2: # 2 es cuando se pone cosas la burbuja.
-				print("Ponible")
-			3: # 3 es cuando se quedan dentro los objetos
-				area.get_parent()._onEnter()
-		pass
+		
+		if area.get_parent().dragType == 0:
+			print("Deformable")
+		elif area.get_parent().dragType == 1:
+			print("Pintable")
+			if Global.r_change > color_r/255:
+				Global.r_change -= 0.02
+			if Global.g_change > color_g/255:
+				Global.g_change -= 0.02
+			if Global.b_change > color_b/255:
+				Global.b_change -= 0.02
+			$rendering/Pompa.modulate = Color(Global.r_change, Global.g_change, Global.b_change, 1)
+		elif area.get_parent().dragType == 2:
+			print ("DOSSS")
+		#elif area.get_parent().dragType == 3: # 3 es cuando se quedan dentro los objetos
+		area.get_parent()._onEnter()
+	
+	
 	# Cambio de tamanyo.
 	if Global.size_bubble_percent < actual_limit:
 		Global.size_bubble_percent += 0.02;	
