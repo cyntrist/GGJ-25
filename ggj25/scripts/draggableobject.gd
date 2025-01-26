@@ -5,7 +5,7 @@ var maxPercent = 1000
 var elapsedPercent = 0
 var dentro = false
 
-@export var dragType : int 
+@export var dragType : int = 0
 @export var Ylimit : float = 200
 @export var draggersNodeBubble: Node2D
 @export var draggersNode: Node2D
@@ -22,11 +22,7 @@ func _ready():
 func _process(delta):
 	# Mover el objeto.
 	if is_selected:
-		global_position = get_global_mouse_position()
-	#elif global_position.y < Ylimit && not dentro:
-		#if elapsedPercent <maxPercent:
-			#elapsedPercent += 10 * delta
-		#global_position.y += elapsedPercent
+		rb.linear_velocity = (get_global_mouse_position() - global_position) * 10
 
 # Para cuando se pulsa.
 func _onDown():
@@ -38,11 +34,11 @@ func _onDown():
 func _onUp():
 	is_selected = false
 	Global.is_dragging = false
+	rb.sleeping = false
 	elapsedPercent = 0
 	if dragType == 3:
 		get_parent().remove_child(rb)
 		draggersNode.add_child(rb)
-		rb.sleeping = false
 		dentro = false
 		global_position = get_global_mouse_position()
 		print(get_parent().name)
@@ -50,7 +46,9 @@ func _onUp():
 
 func _onEnter():
 	#0 = deformable, 1 = pintable, 2 = sombrero, 3 meterse dentro
-	if dragType == 3 && not dentro:
+	if dragType == 2:
+		print("HOLA HOLA CARACOLA")
+	elif dragType == 3 && not dentro:
 		dentro = true
 		rb.sleeping = true
 		get_parent().remove_child(rb)
@@ -61,9 +59,7 @@ func _onEnter():
 		print(self.get_path())
 		rotation = 90
 		print("HOLE HOLE")
-	pass
 
 func _onExit():
 	#0 = deformable, 1 = pintable, 2 = sombrero, 3 meterse dentro
-	
 	pass

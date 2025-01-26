@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuyrmph4jm03f"]
+
+[ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="2_1eld3"]
+[ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="2_wvilc"]
+[ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="9_r15lc"]
+
+[sub_resource type="Curve2D" id="Curve2D_phmb6"]
+_data = {
+"points": PackedVector2Array(11.1293, -0.209987, -11.1293, 0.209987, 270, -49, -2.61844, 13.2422, 2.61844, -13.2422, 246, -71, -8.79813, -3.98122, 8.79813, 3.98122, 275, -86, -6.71958, -12.1792, 6.71958, 12.1792, 290, -74, 2.51984, -14.6991, -2.51984, 14.6991, 260, -41, -6.2996, -6.50959, 6.2996, 6.50959, 265, -23, -8.39947, 2.09987, 8.39947, -2.09987, 284, -18, 1.67989, 16.379, -1.67989, -16.379, 296, -32, 0, 0, 0, 0, 276, -51, -3.56688, 9.70376, 3.56688, -9.70376, 271, -66, -11.8626, -4.09088, 11.8626, 4.09088, 292, -83, 1.76577, -13.773, -1.76577, 13.773, 302, -62, 0, 0, 0, 0, 273, -49, 4.94416, -10.7712, -4.94416, 10.7712, 248, -42, -7.94597, -8.29913, 7.94597, 8.29913, 248, -20, -11.1244, 4.41443, 11.1244, -4.41443, 268, -20, 0, 9.05747, 0, -9.05747, 281, -38, 0, 0, 0, 0, 273, -48, 0, 0, 0, 0, 270, -49)
+}
+point_count = 19
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tr8v7"]
+size = Vector2(1177, 11)
+
+[node name="ScenaAndres" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-1, 5)
+curve = SubResource("Curve2D_phmb6")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(270, -49)
+rotation = 3.12273
+rotates = false
+script = ExtResource("2_wvilc")
+
+[node name="Burbuja" parent="Path2D/PathFollow2D" instance=ExtResource("2_1eld3")]
+position = Vector2(-1.94307, -3.03719)
+rotation = -3.12273
+
+[node name="DraggesNormal" type="Node2D" parent="."]
+
+[node name="Draggable2" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("9_r15lc")]
+position = Vector2(94, -232)
+collision_layer = 3
+dragType = 2
+Ylimit = null
+draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
+draggersNode = NodePath("..")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(0, 232)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-8.5, -4.5)
+shape = SubResource("RectangleShape2D_tr8v7")
