@@ -4,6 +4,7 @@ extends Node2D
 @onready var burbuja_collider: CollisionShape2D = $"3D/Area2D/CollisionShape2D"
 @export var base_size_buble: float = 1
 @export var base_size_collider: float = 2
+@export var nextScene: int
 
 @export var color_r = 94 # Color que tiene que llegar en R.
 @export var color_g = 91 # Color que tiene que llegar en G.
@@ -16,6 +17,11 @@ var next_scale2 = ini_scale2
 
 const SCALE_STEP = 3;
 var actual_limit
+
+#variables para tiempo de espera 
+var toend = false
+var elapsedtime = 0
+var maxtime = 3;
 
 func _ready() -> void: 
 	burbuja_mesh.scale = ini_scale1
@@ -30,6 +36,15 @@ func _process(delta: float) -> void:
 	burbuja_mesh.scale = burbuja_mesh.scale.lerp(next_scale1, delta * SCALE_STEP)
 	burbuja_collider.scale = burbuja_collider.scale.lerp(next_scale2, delta * SCALE_STEP)
 	$"3D/RigidBody2D/CollisionShape2D".scale = burbuja_collider.scale.lerp(next_scale2, delta * SCALE_STEP)
+	
+	if toend:
+		if elapsedtime < maxtime:
+			elapsedtime += delta
+			print(elapsedtime)
+		else:
+			Global.change_scene(nextScene)
+			print("zzumo")
+			
 
 func _on_active():
 	actual_limit = Global.size_bubble_percent + 0.25
@@ -62,3 +77,6 @@ func _area_enter(area: Area2D) -> void:
 		var scale2 = burbuja_collider.scale
 		next_scale1 = scale1 + Vector3(1,1,1) * Global.size_bubble_percent
 		next_scale2 = scale2 + Vector2(1,1) * Global.size_bubble_percent
+	else:
+		toend = true
+		
