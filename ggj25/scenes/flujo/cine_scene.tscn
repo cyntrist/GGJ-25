@@ -71,20 +71,17 @@ position = Vector2(-3, -2)
 [node name="Gafas" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("4_olom6")]
 position = Vector2(1034, 559)
 dragType = 3
-Ylimit = 550.0
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
 
 [node name="Palomita" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("4_olom6")]
 position = Vector2(250, 550)
 dragType = 3
-Ylimit = 550.0
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
 
 [node name="Palomias" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("4_olom6")]
 position = Vector2(87, 550)
 dragType = 3
-Ylimit = 550.0
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
