@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b77hhomj0bwmp"]
 
-[ext_resource type="Texture2D" uid="uid://ci40mlsdam6bd" path="res://assets/modelos3d/PHsphera.png" id="1_1oh1g"]
+[ext_resource type="Texture2D" uid="uid://do0udeb6k1p4j" path="res://assets/img/burbuja_trans.png" id="1_dkgad"]
 
 [resource]
 transparency = 1
 albedo_color = Color(1, 1, 1, 0.788235)
-albedo_texture = ExtResource("1_1oh1g")
+albedo_texture = ExtResource("1_dkgad")

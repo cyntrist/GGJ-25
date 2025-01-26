@@ -98,7 +98,7 @@ position = Vector2(-3, -2)
 
 [node name="Pincel" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("7_0o074")]
 position = Vector2(-271, 233)
-dragType = 3
+dragType = 1
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
 
@@ -113,7 +113,7 @@ icon = ExtResource("8_oc1eg")
 
 [node name="Referesco" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("7_0o074")]
 position = Vector2(-474, 231)
-dragType = 3
+dragType = 1
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
 
@@ -149,7 +149,7 @@ scale = Vector2(60, 1)
 shape = SubResource("RectangleShape2D_68pr1")
 
 [node name="Pajarraco" parent="." node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("7_0o074")]
-position = Vector2(-729, 160)
+position = Vector2(-807, 186)
 dragType = 3
 bubble = NodePath("../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("../DraggesNormal")

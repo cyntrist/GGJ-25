@@ -74,7 +74,6 @@ nextScene = 3
 
 [node name="Tenedor" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("5_nnx67")]
 position = Vector2(232, 222)
-dragType = 3
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
 

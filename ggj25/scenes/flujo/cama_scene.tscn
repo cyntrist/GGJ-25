@@ -73,7 +73,7 @@ nextScene = 8
 
 [node name="ManoDer" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("5_6niix")]
 position = Vector2(473, 223)
-dragType = 3
+dragType = 1
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
 
@@ -87,7 +87,7 @@ icon = ExtResource("6_uxd3j")
 
 [node name="ManoIzq" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("5_6niix")]
 position = Vector2(-467, 226)
-dragType = 3
+dragType = 4
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
 
