@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cuyrmph4jm03f"]
+[gd_scene load_steps=7 format=3 uid="uid://cuyrmph4jm03f"]
 
 [ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="2_1eld3"]
 [ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="2_wvilc"]
+[ext_resource type="PackedScene" uid="uid://c3i6b7ijjxudc" path="res://addons/DragAndDrop3D/nodes/DraggingObject3D.tscn" id="4_0o3ja"]
 [ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="9_r15lc"]
 
 [sub_resource type="Curve2D" id="Curve2D_phmb6"]
@@ -47,3 +48,5 @@ freeze = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(-6, 25)
 shape = SubResource("RectangleShape2D_tr8v7")
+
+[node name="DraggingObject" parent="." instance=ExtResource("4_0o3ja")]
