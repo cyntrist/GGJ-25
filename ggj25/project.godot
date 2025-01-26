@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://scripts/Global.gd"
+DragAndDropGroupHelper="*res://addons/DragAndDrop3D/DragAndDropGroupHelper.gd"
 
 [display]
 
