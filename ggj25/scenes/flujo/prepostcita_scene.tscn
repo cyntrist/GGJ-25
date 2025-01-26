@@ -35,10 +35,10 @@ texture = ExtResource("2_p2hip")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 90.0
-offset_top = 71.0
-offset_right = 1052.0
-offset_bottom = 560.0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 1137.0
+offset_bottom = 628.0
 theme = ExtResource("4_4xflf")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
