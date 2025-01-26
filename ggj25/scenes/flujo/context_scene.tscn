@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://kuee5s7qpvx2"]
 
-[ext_resource type="Texture2D" uid="uid://ssyspj46yg8g" path="res://assets/Fondos/cena.jpg" id="1_gcukb"]
 [ext_resource type="Script" path="res://scripts/scene_scripts/contexto.gd" id="1_hruex"]
+[ext_resource type="Texture2D" uid="uid://brwuepfvsl0fr" path="res://assets/Fondos/nacimiento.png" id="2_lvmgo"]
 [ext_resource type="AudioStream" uid="uid://c2mug16efggx" path="res://sonido/Mainmenutheme.mp3" id="3_wggdh"]
 
 [sub_resource type="Animation" id="Animation_f2rc0"]
@@ -78,9 +78,10 @@ layout_mode = 0
 offset_right = 3840.0
 offset_bottom = 2160.0
 scale = Vector2(0.320001, 0.320001)
-texture = ExtResource("1_gcukb")
+texture = ExtResource("2_lvmgo")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = -385.0
 offset_top = -240.0
