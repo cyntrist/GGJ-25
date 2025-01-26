@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c5bbxxg2ca853"]
+[gd_scene load_steps=16 format=3 uid="uid://sraxxrvyh58f"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/cena.gd" id="1_faf3o"]
 [ext_resource type="Texture2D" uid="uid://ssyspj46yg8g" path="res://assets/Fondos/cena.jpg" id="2_mfx1q"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="5_nnx67"]
 [ext_resource type="Texture2D" uid="uid://bthi1d0emlpi6" path="res://assets/img/tenedor.png" id="6_5psg5"]
 [ext_resource type="Texture2D" uid="uid://dl5ihskw7bwy0" path="res://assets/img/almondiga.png" id="7_x8a43"]
+[ext_resource type="AudioStream" uid="uid://be8la6uuu1vj7" path="res://sonido/DinnerDate.mp3" id="8_3vq2u"]
+[ext_resource type="AudioStream" uid="uid://ef6rc64lnwjr" path="res://sonido/restaurantAmbience.mp3" id="9_upmts"]
 
 [sub_resource type="Curve2D" id="Curve2D_3gq8d"]
 _data = {
@@ -184,6 +186,28 @@ position = Vector2(579, 15)
 rotation = 1.5708
 scale = Vector2(60, 1)
 shape = SubResource("RectangleShape2D_256bl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_3vq2u")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-684, 0)
+stream = ExtResource("9_upmts")
+volume_db = 10.0
+autoplay = true
+attenuation = 7.21
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(666, 0)
+stream = ExtResource("9_upmts")
+volume_db = 10.0
+autoplay = true
+attenuation = 7.21
+parameters/looping = true
 
 [editable path="DraggesNormal/Tenedor"]
 [editable path="DraggesNormal/AlbondigaIzq"]
