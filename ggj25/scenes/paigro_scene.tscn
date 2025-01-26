@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://pevvpd2ouetn" path="res://scenes/picnic_paper.tscn" id="2_8x3wy"]
 [ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="2_qf45o"]
-[ext_resource type="PackedScene" uid="uid://djppmmhmacox3" path="res://scenes/prov_bird.tscn" id="3_3rkkd"]
+[ext_resource type="PackedScene" uid="uid://djppmmhmacox3" path="res://assets/prov_bird.tscn" id="3_3rkkd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vniat"]
 size = Vector2(1171, 20)
