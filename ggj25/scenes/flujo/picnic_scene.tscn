@@ -1,9 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://chq2ttpvye2ui"]
+[gd_scene load_steps=21 format=3 uid="uid://dfa8uubvanr3d"]
 
 [ext_resource type="Texture2D" uid="uid://06dek1iduwb4" path="res://assets/Fondos/picnic.jpg" id="1_ogovi"]
 [ext_resource type="Texture2D" uid="uid://blaqawhmbu56j" path="res://assets/Fondos/papel.png" id="2_iwl5s"]
 [ext_resource type="PackedScene" uid="uid://pevvpd2ouetn" path="res://scenes/picnic_paper.tscn" id="3_510cx"]
-[ext_resource type="PackedScene" path="res://scenes/prov_bird.tscn" id="4_nw8xa"]
+[ext_resource type="PackedScene" uid="uid://djppmmhmacox3" path="res://scenes/prov_bird.tscn" id="4_nw8xa"]
 [ext_resource type="Texture2D" uid="uid://c2fvayqi7t3ir" path="res://assets/img/pajaro_volando.png" id="4_war1b"]
 [ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="5_naubm"]
 [ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="6_f7rxe"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cegomsmmgn4ql" path="res://assets/img/pincel.png" id="8_oc1eg"]
 [ext_resource type="Texture2D" uid="uid://b2n2pry2j3u6d" path="res://assets/img/zumo.png" id="9_asqdg"]
 [ext_resource type="Texture2D" uid="uid://bdep11iaq6uco" path="res://assets/img/pajaro_dardo.png" id="11_n6iu2"]
+[ext_resource type="AudioStream" uid="uid://bwh6rmi4fe4e0" path="res://sonido/ParkDate.mp3" id="12_cd3xj"]
 
 [sub_resource type="Curve2D" id="Curve2D_6uuwt"]
 _data = {
@@ -39,7 +40,7 @@ size = Vector2(155, 61)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68pr1"]
 size = Vector2(24.2333, 29)
 
-[node name="Picnic" type="Control"]
+[node name="Picnic2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -202,6 +203,12 @@ position = Vector2(579, 15)
 rotation = 1.5708
 scale = Vector2(60, 1)
 shape = SubResource("RectangleShape2D_68pr1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_cd3xj")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [editable path="prov_bird"]
 [editable path="DraggesNormal/Pincel"]

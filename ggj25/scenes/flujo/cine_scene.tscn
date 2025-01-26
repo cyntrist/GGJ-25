@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bntoie4b8lq2u"]
+[gd_scene load_steps=17 format=3 uid="uid://ymu78lthlqs4"]
 
 [ext_resource type="Texture2D" uid="uid://dtse21j06jgl5" path="res://assets/Fondos/cine.jpg" id="1_wvrb2"]
 [ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="2_w24gh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cqs2lcrrjbys3" path="res://assets/img/gafas_3d.png" id="5_xrqoh"]
 [ext_resource type="Texture2D" uid="uid://bui4ommlf0qp4" path="res://assets/img/palomita.png" id="6_rpc42"]
 [ext_resource type="Texture2D" uid="uid://d3eo46ytotrpr" path="res://assets/img/palomitas.png" id="7_b4eqg"]
+[ext_resource type="AudioStream" uid="uid://c3pspdbweaosu" path="res://sonido/cine.mp3" id="8_6n0s2"]
 
 [sub_resource type="Curve2D" id="Curve2D_o6qgl"]
 _data = {
@@ -171,6 +172,12 @@ position = Vector2(579, 15)
 rotation = 1.5708
 scale = Vector2(60, 1)
 shape = SubResource("RectangleShape2D_k7m5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_6n0s2")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [editable path="DraggesNormal/Gafas"]
 [editable path="DraggesNormal/Palomita"]

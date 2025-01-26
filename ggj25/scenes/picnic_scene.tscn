@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://06dek1iduwb4" path="res://assets/Fondos/picnic.jpg" id="1_ogovi"]
 [ext_resource type="Texture2D" uid="uid://blaqawhmbu56j" path="res://assets/Fondos/papel.png" id="2_iwl5s"]
 [ext_resource type="PackedScene" uid="uid://pevvpd2ouetn" path="res://scenes/picnic_paper.tscn" id="3_510cx"]
-[ext_resource type="PackedScene" uid="uid://djppmmhmacox3" path="res://assets/prov_bird.tscn" id="4_nw8xa"]
+[ext_resource type="PackedScene" uid="uid://djppmmhmacox3" path="res://scenes/prov_bird.tscn" id="4_nw8xa"]
 [ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="5_naubm"]
 [ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="6_f7rxe"]
 [ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="7_0o074"]
@@ -83,16 +83,14 @@ rotation = -3.12273
 [node name="DraggesNormal" type="Node2D" parent="."]
 position = Vector2(-3, -2)
 
-[node name="Pincel" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("7_0o074")]
+[node name="Pincel" parent="DraggesNormal" node_paths=PackedStringArray("draggersNode") instance=ExtResource("7_0o074")]
 position = Vector2(-318, 233)
 dragType = 3
-draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
 
-[node name="Referesco" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("7_0o074")]
+[node name="Referesco" parent="DraggesNormal" node_paths=PackedStringArray("draggersNode") instance=ExtResource("7_0o074")]
 position = Vector2(-474, 231)
 dragType = 3
-draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/DraggersBuble")
 draggersNode = NodePath("..")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
