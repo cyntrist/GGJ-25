@@ -1,6 +1,4 @@
 extends Node2D
-#public
-@onready var sub_viewport: SubViewport = $"3D/SubViewport"
 
 var burbuja_mesh = self
 @export var base_size_collider: float = 0.1

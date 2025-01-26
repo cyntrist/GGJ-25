@@ -36,7 +36,7 @@ var credits = [
 		"BURBUJARRONAS"
 	], [
 		"PROGRAMACIÓN",
-		"Pablo Iglesias Rodríguez",
+		"Pablo Iglesias Rodrigo",
 		"Andrés García Navarro",
 		"Cynthia Tristán Álvarez"
 	], [
