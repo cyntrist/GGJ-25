@@ -14,11 +14,10 @@ var stop = false
 var transitioned = false
 @export var first_font : FontFile = null
 @export var second_font : FontFile = null
-var theme
+var selected = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	theme = label.theme
 	pass # Replace with function body.
 
 
@@ -42,6 +41,8 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event):
+	if selected:
+		return
 	if event.is_action_pressed("click"):
 		print("CCCCCCCCCLLLLLLLLLLIIIIIIIIIIIIIICCCCCCCCCCCCCKKKKKKKKKKKKK")
 		if !text_ended:
@@ -49,6 +50,7 @@ func _input(event):
 			stop = true;
 			text_ended = true;
 		else:
+			selected = true
 			match Global.stage:
 				0: # estas en la precena y vas a la cena
 					Global.change_scene(Global.Scenes.CENA)
