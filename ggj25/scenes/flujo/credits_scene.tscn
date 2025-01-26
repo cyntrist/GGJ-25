@@ -29,7 +29,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 0
 offset_right = 3452.0
 offset_bottom = 2448.0
-scale = Vector2(0.34, 0.27)
+scale = Vector2(0.36, 0.29)
 texture = ExtResource("3_y4vow")
 
 [node name="VideoPlayer" type="VideoStreamPlayer" parent="."]

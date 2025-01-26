@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://c7qrogiqlu6kl"]
+[gd_scene load_steps=18 format=3 uid="uid://c7qrogiqlu6kl"]
 
 [ext_resource type="Script" path="res://scripts/GameStateMachine.gd" id="1_n0ssg"]
 [ext_resource type="PackedScene" uid="uid://doma3ldba1l8e" path="res://scenes/flujo/credits_scene.tscn" id="2_te1d5"]
+[ext_resource type="PackedScene" uid="uid://bhyvu3tr1y48v" path="res://scenes/flujo/pop_scene.tscn" id="3_gqo0v"]
 [ext_resource type="PackedScene" uid="uid://c3n36kyi4l3sj" path="res://scenes/flujo/cama_scene.tscn" id="3_mt0o5"]
 [ext_resource type="PackedScene" uid="uid://sraxxrvyh58f" path="res://scenes/flujo/cena_scene.tscn" id="4_khev6"]
 [ext_resource type="PackedScene" uid="uid://ymu78lthlqs4" path="res://scenes/flujo/cine_scene.tscn" id="5_2irew"]
@@ -48,6 +49,9 @@ offset_right = -577.0
 offset_bottom = -313.0
 bg_color = Color(0, 0, 0, 1)
 
+[node name="Pop" parent="." instance=ExtResource("3_gqo0v")]
+process_mode = 4
+
 [node name="Cama" parent="." instance=ExtResource("3_mt0o5")]
 process_mode = 4
 visible = false
@@ -76,11 +80,10 @@ offset_bottom = -322.0
 
 [node name="Contexto" parent="." instance=ExtResource("11_cl8xq")]
 process_mode = 4
-visible = false
 offset_left = -576.0
-offset_top = -322.0
+offset_top = -324.0
 offset_right = -576.0
-offset_bottom = -322.0
+offset_bottom = -324.0
 
 [node name="MainMenu" parent="." instance=ExtResource("13_elxvt")]
 process_mode = 4
