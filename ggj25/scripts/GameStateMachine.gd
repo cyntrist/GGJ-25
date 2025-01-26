@@ -10,6 +10,7 @@ extends Node
 @onready var picnic = $Picnic
 @onready var cama = $Cama
 @onready var credits = $Credits
+@onready var pop = $Pop
 @onready var fade = $FadeScene
 
 @onready var bgm: AudioStreamPlayer2D = $BGM
@@ -111,6 +112,10 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 			cama.visible = false
 			cama.on_disable()
 			cama.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.POP:
+			pop.visible = false
+			pop.on_disable()
+			pop.process_mode = Node.PROCESS_MODE_DISABLED
 		Global.Scenes.CREDITS:
 			credits.visible = false
 			credits.process_mode = Node.PROCESS_MODE_DISABLED
@@ -153,6 +158,10 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 			cama.visible = true
 			cama.on_enable()
 			cama.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.POP:
+			pop.visible = true
+			pop.on_enable()
+			pop.process_mode = Node.PROCESS_MODE_INHERIT
 		Global.Scenes.CREDITS:
 			credits.visible = true
 			credits.process_mode = Node.PROCESS_MODE_INHERIT
