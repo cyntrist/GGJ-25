@@ -46,18 +46,10 @@ func _process(delta):
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		mousePos = event.position
-	
-func get_mouse_intersect(mousePosition):
-	var currentCamera = get_viewport().get_camera_3d()
-	var params = PhysicsRayQueryParameters3D.new()
-	
-	params.from = currentCamera.project_ray_origin(mousePosition)
-	params.to = currentCamera.project_position(mousePosition, 1000)
-	
-	var worldspace = get_world_3d().direct_space_state
-	var result = worldspace.intersect_ray(params)
-	
-	return result
+
+func get_grab_position() -> Vector2:
+	var posEnMundo = bubble.get_node("3D/SubViewport").get_camera_3d().project_position(position,10)
+	return Vector2(posEnMundo.x, posEnMundo.y)
 
 # Para cuando se pulsa.
 func _onDown():
