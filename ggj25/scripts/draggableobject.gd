@@ -15,14 +15,14 @@ const PATH_PREFAB = preload("res://prefabs/path_prefab.tscn")
 # esto es para la esfera de influencia de la malla
 @export var offset: Vector2
 var mousePos: Vector2
-var sphericalDeformer
-const SPHERICAL_DEFORMER = preload("res://prefabs/spherical_deformer.tscn")
+#var sphericalDeformer
+#const SPHERICAL_DEFORMER = preload("res://prefabs/spherical_deformer.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sphericalDeformer = SPHERICAL_DEFORMER.instantiate()
-	bubble.get_node("3D/SubViewport").add_child(sphericalDeformer)
-	print(sphericalDeformer.get_path())
+	#sphericalDeformer = SPHERICAL_DEFORMER.instantiate()
+	#bubble.get_node("3D/SubViewport").add_child(sphericalDeformer)
+	#print(sphericalDeformer.get_path())
 	
 	mousePos.x = 0
 	mousePos.y = 0
@@ -39,8 +39,8 @@ func _process(delta):
 	# Mover el objeto.
 	if is_selected:
 		rb.linear_velocity = (get_global_mouse_position() - global_position) * 10
-		sphericalDeformer.position = newpos
-		print(sphericalDeformer.position)
+		#sphericalDeformer.position = newpos
+		#print(sphericalDeformer.position)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
