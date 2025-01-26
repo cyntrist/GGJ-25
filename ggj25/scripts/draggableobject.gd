@@ -6,8 +6,9 @@ var elapsedPercent = 0
 var dentro = false
 
 @export var dragType : int = 0
-@export var bubble: Node2D
+#@export var bubble: Node2D
 @export var draggersNode: Node2D
+@onready var bubble: Node2D = $"../../Path2D/PathFollow2D/Burbuja"
 
 var rb: RigidBody2D
 const PATH_PREFAB = preload("res://prefabs/path_prefab.tscn")
@@ -27,11 +28,11 @@ func _ready():
 	mousePos.x = 0
 	mousePos.y = 0
 	
-	rb = get_node(".")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	rb = get_node(".")
 	#definicion de la posicion del deformador
 	#var ola = get_grab_position() + offset
 	#var newpos = Vector3(ola.x, ola.y, 0)
