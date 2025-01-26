@@ -65,6 +65,6 @@ func _area_enter(area: Area2D) -> void:
 	# Cambio de tamanyo.
 	if  Global.actual_size < ((Global.max_bubble_size / 4) * Global.nivel_actual) and not toend:
 		Global.actual_size += 0.05
-	else:
+	elif not toend:
 		toend = true
 		Global.nivel_actual += 1
