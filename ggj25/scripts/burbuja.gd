@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 			print(elapsedtime)
 		else:
 			Global.change_scene(nextScene)
-			print("zzumo")
+			#print("zzumo")
 			
 
 func _on_active():

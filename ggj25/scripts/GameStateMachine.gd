@@ -51,7 +51,8 @@ func _input(event):
 		Global.change_scene(Global.Scenes.CREDITS)
 	if event.is_action_pressed("10"):
 		Global.change_scene(Global.Scenes.NULL)
-		
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
 
 # func _change_to_scene(newScene: scenes):
 # 	if current_scente != next_scene:
