@@ -26,8 +26,8 @@ func _process(delta: float) -> void:
 		label.visible_ratio =  1
 		text_ended = true
 	elif elapsedTime <= maxTime:
-		if label.visible_ratio == 1:
-			text_ended = true
+		# if label.visible_ratio == 1:
+		# 	text_ended = true
 		if textDisplay < 1:
 			if timer >= frames_per_letter:
 				timer = 0
@@ -41,8 +41,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event):
-	if selected:
-		return
 	if event.is_action_pressed("click"):
 		print("CCCCCCCCCLLLLLLLLLLIIIIIIIIIIIIIICCCCCCCCCCCCCKKKKKKKKKKKKK")
 		if !text_ended:
