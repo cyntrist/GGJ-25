@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://mqr3j6tyasd"]
+[gd_scene load_steps=10 format=3 uid="uid://c3n36kyi4l3sj"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/cama.gd" id="1_hs8la"]
 [ext_resource type="Texture2D" uid="uid://d4bnkbmiehl6j" path="res://assets/Fondos/cama.jpg" id="2_w31d4"]
@@ -67,15 +67,15 @@ script = ExtResource("3_hqd0d")
 rotation = -3.12273
 nextScene = 8
 
+[node name="DraggersBuble" type="Node2D" parent="Path2D/PathFollow2D"]
+
 [node name="DraggesNormal" type="Node2D" parent="."]
 
 [node name="ManoDer" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("5_6niix")]
 position = Vector2(473, 223)
 dragType = 1
-Ylimit = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
-offset = null
 
 [node name="Button" parent="DraggesNormal/ManoDer" index="2"]
 offset_left = -108.0
@@ -88,10 +88,8 @@ icon = ExtResource("6_uxd3j")
 [node name="ManoIzq" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("5_6niix")]
 position = Vector2(-467, 226)
 dragType = 4
-Ylimit = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
-offset = null
 
 [node name="Button" parent="DraggesNormal/ManoIzq" index="2"]
 offset_top = -211.0

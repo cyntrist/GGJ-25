@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://chq2ttpvye2ui"]
+[gd_scene load_steps=14 format=3 uid="uid://dfa8uubvanr3d"]
 
 [ext_resource type="Texture2D" uid="uid://06dek1iduwb4" path="res://assets/Fondos/picnic.jpg" id="1_ogovi"]
 [ext_resource type="Texture2D" uid="uid://blaqawhmbu56j" path="res://assets/Fondos/papel.png" id="2_iwl5s"]
 [ext_resource type="PackedScene" uid="uid://pevvpd2ouetn" path="res://scenes/picnic_paper.tscn" id="3_510cx"]
-[ext_resource type="PackedScene" path="res://scenes/prov_bird.tscn" id="4_nw8xa"]
+[ext_resource type="PackedScene" uid="uid://djppmmhmacox3" path="res://scenes/prov_bird.tscn" id="4_nw8xa"]
 [ext_resource type="Texture2D" uid="uid://c2fvayqi7t3ir" path="res://assets/img/pajaro_volando.png" id="4_war1b"]
 [ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="5_naubm"]
 [ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="6_f7rxe"]
@@ -99,10 +99,8 @@ position = Vector2(-3, -2)
 [node name="Pincel" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("7_0o074")]
 position = Vector2(-271, 233)
 dragType = 1
-Ylimit = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
-offset = null
 
 [node name="Button" parent="DraggesNormal/Pincel" index="2"]
 offset_left = 71.0
@@ -116,10 +114,8 @@ icon = ExtResource("8_oc1eg")
 [node name="Referesco" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("7_0o074")]
 position = Vector2(-474, 231)
 dragType = 1
-Ylimit = null
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
-offset = null
 
 [node name="Button" parent="DraggesNormal/Referesco" index="2"]
 offset_top = -187.0
@@ -155,10 +151,8 @@ shape = SubResource("RectangleShape2D_68pr1")
 [node name="Pajarraco" parent="." node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("7_0o074")]
 position = Vector2(-807, 186)
 dragType = 3
-Ylimit = null
 bubble = NodePath("../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("../DraggesNormal")
-offset = null
 
 [node name="Button" parent="Pajarraco" index="2"]
 offset_left = -75.0
