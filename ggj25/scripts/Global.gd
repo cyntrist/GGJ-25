@@ -22,11 +22,23 @@ var b_change = 1
 var stage = 0
 # 0 precena 1 postcena 2 precine 3 postcine 4 prepicnic 5 pospicnic 6 precama
 
+var coolDown = 2
+var startCoolDown = false
+
+func  _process(delta: float) -> void:
+	if startCoolDown:
+		if coolDown <= 0:
+			startCoolDown = false
+			coolDown = 1
+		else:
+			coolDown-= delta
+
 func next_stage():
 	Global.stage += 1
 	Global.stage = clamp(Global.stage, 0, 6)
 
 func change_scene(next : Global.Scenes, force = true):
-	if (current_scene != next || force):
+	if ((current_scene != next || force)and not startCoolDown):
+		startCoolDown = true
 		Global.next_scene = next
 		Global.to_transition.emit()

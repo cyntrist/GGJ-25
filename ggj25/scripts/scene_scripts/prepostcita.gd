@@ -47,7 +47,7 @@ func _input(event):
 			label.visible_ratio = 1
 			stop = true;
 			text_ended = true;
-		else:
+		elif not Global.startCoolDown:
 			selected = true
 			match Global.stage:
 				0: # estas en la precena y vas a la cena
