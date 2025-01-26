@@ -43,6 +43,7 @@ func _process(delta: float) -> void:
 
 func _input(event):
 	if event.is_action_pressed("click"):
+		print("CCCCCCCCCLLLLLLLLLLIIIIIIIIIIIIIICCCCCCCCCCCCCKKKKKKKKKKKKK")
 		if !text_ended:
 			label.visible_ratio = 1
 			stop = true;
@@ -86,6 +87,7 @@ func _input(event):
 
 
 func on_enable():
+	_reset()
 		# movidas del jason
 	var string = "Precita"
 	match Global.stage:

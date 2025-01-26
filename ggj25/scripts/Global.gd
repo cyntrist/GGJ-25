@@ -12,7 +12,9 @@ enum ObjsTypes { DEFORMABLE, COLOCABLE, PINTABLE}
 var gms
 var current_scene = Scenes.NULL 
 var next_scene = Scenes.INTRO
-var size_bubble_percent = 0
+var max_bubble_size = 1.5
+var actual_size = 0.1
+var nivel_actual = 1
 var is_dragging
 var r_change = 1
 var g_change = 1
