@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://chq2ttpvye2ui"]
+[gd_scene load_steps=20 format=3 uid="uid://chq2ttpvye2ui"]
 
 [ext_resource type="Texture2D" uid="uid://06dek1iduwb4" path="res://assets/Fondos/picnic.jpg" id="1_ogovi"]
 [ext_resource type="Texture2D" uid="uid://blaqawhmbu56j" path="res://assets/Fondos/papel.png" id="2_iwl5s"]
@@ -17,6 +17,24 @@ _data = {
 "points": PackedVector2Array(11.1293, -0.209987, -11.1293, 0.209987, 270, -49, -2.61844, 13.2422, 2.61844, -13.2422, 246, -71, -8.79813, -3.98122, 8.79813, 3.98122, 275, -86, -6.71958, -12.1792, 6.71958, 12.1792, 290, -74, 2.51984, -14.6991, -2.51984, 14.6991, 260, -41, -6.2996, -6.50959, 6.2996, 6.50959, 265, -23, -8.39947, 2.09987, 8.39947, -2.09987, 284, -18, 1.67989, 16.379, -1.67989, -16.379, 296, -32, 0, 0, 0, 0, 276, -51, -3.56688, 9.70376, 3.56688, -9.70376, 271, -66, -11.8626, -4.09088, 11.8626, 4.09088, 292, -83, 1.76577, -13.773, -1.76577, 13.773, 302, -62, 0, 0, 0, 0, 273, -49, 4.94416, -10.7712, -4.94416, 10.7712, 248, -42, -7.94597, -8.29913, 7.94597, 8.29913, 248, -20, -11.1244, 4.41443, 11.1244, -4.41443, 268, -20, 0, 9.05747, 0, -9.05747, 281, -38, 0, 0, 0, 0, 273, -48, 0, 0, 0, 0, 270, -49)
 }
 point_count = 19
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jds3"]
+size = Vector2(84, 313)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngj8m"]
+size = Vector2(70, 311)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0x6g"]
+size = Vector2(131, 219)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o5mv"]
+size = Vector2(141, 226)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpwxs"]
+size = Vector2(160, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rb62x"]
+size = Vector2(155, 61)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68pr1"]
 size = Vector2(24.2333, 29)
@@ -63,7 +81,10 @@ texture = ExtResource("2_iwl5s")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="prov_bird" parent="." node_paths=PackedStringArray("new_bird") instance=ExtResource("4_nw8xa")]
-new_bird = NodePath("../Pajarraco")
+new_bird = NodePath("../DraggesNormal/Pajarraco")
+
+[node name="CollisionShape2D" parent="prov_bird" index="0"]
+position = Vector2(19.5, 10.75)
 
 [node name="Button" parent="prov_bird" index="1"]
 offset_left = -78.0
@@ -72,6 +93,7 @@ offset_right = 1428.0
 offset_bottom = 1034.0
 scale = Vector2(0.119995, 0.119995)
 icon = ExtResource("4_war1b")
+flat = true
 
 [node name="Papel" parent="." instance=ExtResource("3_510cx")]
 position = Vector2(317, 148)
@@ -99,12 +121,20 @@ position = Vector2(-271, 233)
 dragType = 1
 draggersNode = NodePath("..")
 
+[node name="CollisionShape2D" parent="DraggesNormal/Pincel" index="0"]
+position = Vector2(30, -63.5)
+shape = SubResource("RectangleShape2D_0jds3")
+
+[node name="CollisionShape2D" parent="DraggesNormal/Pincel/DragAr" index="0"]
+position = Vector2(31, -61.5)
+shape = SubResource("RectangleShape2D_ngj8m")
+
 [node name="Button" parent="DraggesNormal/Pincel" index="2"]
 offset_left = 71.0
 offset_top = -223.0
 offset_right = 1690.0
 offset_bottom = 165.0
-rotation = 1.71981
+rotation = 1.57079
 scale = Vector2(0.200001, 0.200001)
 icon = ExtResource("8_oc1eg")
 
@@ -113,12 +143,41 @@ position = Vector2(-474, 231)
 dragType = 1
 draggersNode = NodePath("..")
 
+[node name="CollisionShape2D" parent="DraggesNormal/Referesco" index="0"]
+position = Vector2(17.5, -45.5)
+shape = SubResource("RectangleShape2D_w0x6g")
+
+[node name="CollisionShape2D" parent="DraggesNormal/Referesco/DragAr" index="0"]
+position = Vector2(15.5, -46)
+shape = SubResource("RectangleShape2D_7o5mv")
+
 [node name="Button" parent="DraggesNormal/Referesco" index="2"]
 offset_top = -187.0
 offset_right = 956.0
 offset_bottom = 1442.0
 scale = Vector2(0.16, 0.16)
 icon = ExtResource("9_asqdg")
+
+[node name="Pajarraco" parent="DraggesNormal" node_paths=PackedStringArray("draggersNode") instance=ExtResource("7_0o074")]
+position = Vector2(-804, 188)
+dragType = 3
+draggersNode = NodePath("..")
+
+[node name="CollisionShape2D" parent="DraggesNormal/Pajarraco" index="0"]
+position = Vector2(9, -0.5)
+shape = SubResource("RectangleShape2D_gpwxs")
+
+[node name="CollisionShape2D" parent="DraggesNormal/Pajarraco/DragAr" index="0"]
+position = Vector2(8.5, -0.5)
+shape = SubResource("RectangleShape2D_rb62x")
+
+[node name="Button" parent="DraggesNormal/Pajarraco" index="2"]
+offset_left = -75.0
+offset_top = -52.0
+offset_right = 1427.0
+offset_bottom = 873.0
+scale = Vector2(0.109437, 0.109437)
+icon = ExtResource("11_n6iu2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -144,20 +203,7 @@ rotation = 1.5708
 scale = Vector2(60, 1)
 shape = SubResource("RectangleShape2D_68pr1")
 
-[node name="Pajarraco" parent="." node_paths=PackedStringArray("draggersNode") instance=ExtResource("7_0o074")]
-position = Vector2(-807, 186)
-dragType = 3
-draggersNode = NodePath("../DraggesNormal")
-
-[node name="Button" parent="Pajarraco" index="2"]
-offset_left = -75.0
-offset_top = -52.0
-offset_right = 1427.0
-offset_bottom = 873.0
-scale = Vector2(0.109437, 0.109437)
-icon = ExtResource("11_n6iu2")
-
 [editable path="prov_bird"]
 [editable path="DraggesNormal/Pincel"]
 [editable path="DraggesNormal/Referesco"]
-[editable path="Pajarraco"]
+[editable path="DraggesNormal/Pajarraco"]
