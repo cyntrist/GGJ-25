@@ -121,7 +121,7 @@ func on_enable():
 
 			pass
 		6: # precama
-			string = "PREFOLLAR"
+			string = "PREFOLLARUNO"
 			label.set("theme_override_fonts/font", first_font)
 			pass
 			

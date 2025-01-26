@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dln7e0v22y13j"]
+[gd_scene load_steps=11 format=3 uid="uid://bkgt4f2mux5nr"]
 
 [ext_resource type="Texture2D" uid="uid://06dek1iduwb4" path="res://assets/Fondos/picnic.jpg" id="1_ogovi"]
 [ext_resource type="Texture2D" uid="uid://blaqawhmbu56j" path="res://assets/Fondos/papel.png" id="2_iwl5s"]
 [ext_resource type="PackedScene" uid="uid://pevvpd2ouetn" path="res://scenes/picnic_paper.tscn" id="3_510cx"]
-[ext_resource type="PackedScene" uid="uid://djppmmhmacox3" path="res://scenes/prov_bird.tscn" id="4_nw8xa"]
+[ext_resource type="PackedScene" path="res://scenes/prov_bird.tscn" id="4_nw8xa"]
 [ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="5_naubm"]
 [ext_resource type="PackedScene" uid="uid://hah1b4mafxik" path="res://scenes/burbuja.tscn" id="6_f7rxe"]
 [ext_resource type="PackedScene" uid="uid://bclcsuhbi3k57" path="res://scenes/draggable.tscn" id="7_0o074"]
