@@ -10,7 +10,7 @@ extends Control
 @export var Use_Video_Audio : bool = false
 @export var Video : VideoStream = null
 
-const section_time := 10.0
+const section_time := 2.0
 const line_time := 0.3
 const base_speed := 100
 const speed_up_multiplier := 10.0
@@ -33,7 +33,7 @@ var lines := []
 
 var credits = [
 	[
-		"BURBUJARRONAS"
+		"BURBUJARRONES"
 	], [
 		"PROGRAMACIÓN",
 		"Pablo Iglesias Rodrigo",
