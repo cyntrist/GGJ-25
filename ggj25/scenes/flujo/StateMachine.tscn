@@ -110,13 +110,13 @@ script = SubResource("GDScript_un3us")
 
 [node name="Intro" parent="." instance=ExtResource("14_jm1u2")]
 process_mode = 4
+visible = false
 offset_left = -575.0
 offset_top = -361.0
 offset_right = -575.0
 offset_bottom = -361.0
 
 [node name="NullScene" parent="." instance=ExtResource("15_srbh3")]
-visible = false
 scale = Vector2(3.28, 3.28)
 script = ExtResource("16_h6euw")
 
