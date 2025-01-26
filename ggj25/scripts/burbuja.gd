@@ -1,4 +1,6 @@
 extends Node2D
+#public
+@onready var sub_viewport: SubViewport = $"3D/SubViewport"
 
 @onready var burbuja_mesh: MeshInstance3D = $"3D/SubViewport/DeformableMeshInstance3D"
 @onready var burbuja_collider: CollisionShape2D = $"3D/Area2D/CollisionShape2D"
@@ -26,6 +28,7 @@ var maxtime = 3;
 func _ready() -> void: 
 	burbuja_mesh.scale = ini_scale1
 	burbuja_collider.scale = ini_scale2
+	sub_viewport = $"3D/SubViewport"
 	_on_active()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
