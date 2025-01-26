@@ -43,11 +43,10 @@ script = ExtResource("1_n0ssg")
 
 [node name="Credits" parent="." instance=ExtResource("2_te1d5")]
 process_mode = 4
-visible = false
 offset_left = -577.0
-offset_top = -313.0
+offset_top = -337.0
 offset_right = -577.0
-offset_bottom = -313.0
+offset_bottom = -337.0
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Pop" parent="." instance=ExtResource("3_gqo0v")]
