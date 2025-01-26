@@ -20,6 +20,7 @@ var r_change = 1
 var g_change = 1
 var b_change = 1
 var stage = 0
+var sfx
 # 0 precena 1 postcena 2 precine 3 postcine 4 prepicnic 5 pospicnic 6 precama
 
 var coolDown = 2

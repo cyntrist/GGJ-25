@@ -125,6 +125,9 @@ offset_bottom = 876.0
 scale = Vector2(0.144172, 0.148353)
 icon = ExtResource("7_x8a43")
 
+[node name="AudioStreamPlayer2D" parent="DraggesNormal/AlbondigaIzq" index="3"]
+volume_db = 8.884
+
 [node name="AlbondigaIzq2" parent="DraggesNormal" node_paths=PackedStringArray("draggersNode") instance=ExtResource("5_nnx67")]
 position = Vector2(-320, 225)
 dragType = 3

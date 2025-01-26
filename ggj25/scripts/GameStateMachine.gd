@@ -22,6 +22,7 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.gms = self
+	Global.sfx = sfx_1
 	# Global.to_transition.connect(_on_totransition)
 	Global.transitioned.connect(_on_fade_scene_transitioned)
 	Global.on_end.connect(_on_end)
