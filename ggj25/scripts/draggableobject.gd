@@ -6,7 +6,6 @@ var elapsedPercent = 0
 var dentro = false
 
 @export var dragType : int = 0
-@export var Ylimit : float = 200
 @export var bubble: Node2D
 @export var draggersNode: Node2D
 

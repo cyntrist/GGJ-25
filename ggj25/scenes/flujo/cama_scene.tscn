@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3n36kyi4l3sj"]
+[gd_scene load_steps=10 format=3 uid="uid://mqr3j6tyasd"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/cama.gd" id="1_hs8la"]
 [ext_resource type="Texture2D" uid="uid://d4bnkbmiehl6j" path="res://assets/Fondos/cama.jpg" id="2_w31d4"]
@@ -66,8 +66,6 @@ script = ExtResource("3_hqd0d")
 [node name="Burbuja" parent="Path2D/PathFollow2D" instance=ExtResource("4_x0mlk")]
 rotation = -3.12273
 nextScene = 8
-
-[node name="DraggersBuble" type="Node2D" parent="Path2D/PathFollow2D"]
 
 [node name="DraggesNormal" type="Node2D" parent="."]
 

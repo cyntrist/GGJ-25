@@ -37,8 +37,10 @@ rotation = -3.12273
 position = Vector2(94, -232)
 collision_mask = 3
 dragType = 2
+Ylimit = 200.0
 bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
+offset = Vector2(0, 0)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(0, 232)
