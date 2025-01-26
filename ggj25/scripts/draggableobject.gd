@@ -33,8 +33,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#definicion de la posicion del deformador
-	var ola = get_grab_position() + offset
-	var newpos = Vector3(ola.x, ola.y, 0)
+	#var ola = get_grab_position() + offset
+	#var newpos = Vector3(ola.x, ola.y, 0)
 	
 	# Mover el objeto.
 	if is_selected:
@@ -46,9 +46,9 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		mousePos = event.position
 
-func get_grab_position() -> Vector2:
-	var posEnMundo = bubble.get_node("3D/SubViewport").get_camera_3d().project_position(position,10)
-	return Vector2(posEnMundo.x, posEnMundo.y)
+#func get_grab_position() -> Vector2:
+	#var posEnMundo = bubble.get_node("3D/SubViewport").get_camera_3d().project_position(position,10)
+	#return Vector2(posEnMundo.x, posEnMundo.y)
 
 # Para cuando se pulsa.
 func _onDown():
