@@ -4,6 +4,7 @@ extends Node2D
 
 @onready var burbuja_mesh: MeshInstance3D = $"3D/SubViewport/DeformableMeshInstance3D"
 @onready var burbuja_collider: CollisionShape2D = $"3D/Area2D/CollisionShape2D"
+@onready var burbuja_collider2: CollisionShape2D = $"3D/RigidBody2D/CollisionShape2D"
 @export var base_size_buble: float = 1
 @export var base_size_collider: float = 2
 @export var nextScene: int
@@ -28,6 +29,7 @@ var maxtime = 3;
 func _ready() -> void: 
 	burbuja_mesh.scale = ini_scale1
 	burbuja_collider.scale = ini_scale2
+	burbuja_collider2.scale = ini_scale2
 	sub_viewport = $"3D/SubViewport"
 	_on_active()
 
@@ -37,10 +39,11 @@ func _process(delta: float) -> void:
 	var scale2 = burbuja_collider.scale
 
 	burbuja_mesh.scale = burbuja_mesh.scale.lerp(next_scale1, delta * SCALE_STEP)
-	burbuja_collider.scale = burbuja_collider.scale.lerp(next_scale2, delta * SCALE_STEP)
-	$"3D/RigidBody2D/CollisionShape2D".scale = burbuja_collider.scale.lerp(next_scale2, delta * SCALE_STEP)
+	burbuja_collider.scale = next_scale2
+	#pint(next_scale1)
+	burbuja_collider2.scale = next_scale2
 	
-	print(position)
+	#print(position)
 	
 	if toend:
 		if elapsedtime < maxtime:

@@ -33,11 +33,10 @@ rotation = -3.12273
 
 [node name="DraggesNormal" type="Node2D" parent="."]
 
-[node name="Draggable2" parent="DraggesNormal" node_paths=PackedStringArray("bubble", "draggersNode") instance=ExtResource("9_r15lc")]
+[node name="Draggable2" parent="DraggesNormal" node_paths=PackedStringArray("draggersNode") instance=ExtResource("9_r15lc")]
 position = Vector2(94, -232)
 collision_mask = 3
 dragType = 2
-bubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
 offset = Vector2(0, 0)
 
