@@ -76,7 +76,7 @@ func _onEnter():
 	#0 = deformable, 1 = pintable, 2 = sombrero, 3 meterse dentro
 	if dragType == 2:
 		print("HOLA HOLA CARACOLA")
-	elif dragType == 3 && not dentro:
+	elif dragType == 3 && not dentro and Global.stage != 8:
 		dentro = true
 		rb.sleeping = true
 		get_parent().remove_child(rb)
