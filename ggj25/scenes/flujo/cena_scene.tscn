@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://sraxxrvyh58f"]
+[gd_scene load_steps=16 format=3 uid="uid://c5bbxxg2ca853"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/cena.gd" id="1_faf3o"]
 [ext_resource type="Texture2D" uid="uid://ssyspj46yg8g" path="res://assets/Fondos/cena.jpg" id="2_mfx1q"]
@@ -124,6 +124,9 @@ offset_right = 906.0
 offset_bottom = 876.0
 scale = Vector2(0.144172, 0.148353)
 icon = ExtResource("7_x8a43")
+
+[node name="AudioStreamPlayer2D" parent="DraggesNormal/AlbondigaIzq" index="3"]
+volume_db = 8.884
 
 [node name="AlbondigaIzq2" parent="DraggesNormal" node_paths=PackedStringArray("draggersNode") instance=ExtResource("5_nnx67")]
 position = Vector2(-320, 225)

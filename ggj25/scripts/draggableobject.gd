@@ -74,9 +74,9 @@ func _onUp():
 
 func _onEnter():
 	#0 = deformable, 1 = pintable, 2 = sombrero, 3 meterse dentro
-	if dragType == 2:
-		print("HOLA HOLA CARACOLA")
-	elif dragType == 3 && not dentro:
+	if dragType == 3 && not dentro and Global.stage != 8:
+		Global.sfx.stream = load("res://sonido/Audios extra/cachetes.wav")
+		Global.sfx.play()
 		dentro = true
 		rb.sleeping = true
 		get_parent().remove_child(rb)
@@ -87,3 +87,8 @@ func _onEnter():
 		print(self.get_path())
 		rotation = 90
 		print("HOLE HOLE")
+	else:
+		Global.sfx.stream = load("res://sonido/Audios extra/Entra en burbuja 2.wav")
+		Global.sfx.play()
+		print("HOLA HOLA CARACOLA")
+		

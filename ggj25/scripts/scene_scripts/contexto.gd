@@ -15,8 +15,7 @@ var transitioned = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	label.text = "Contexto contexto Contexto contexto Contexto contexto Contexto contexto Contexto contexto Contexto contexto contexto contexto Contexto contexto Contexto contexto Contexto contexto Contexto contexto Contexto contexto Contexto contexto"
-
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if stop:
@@ -52,10 +51,8 @@ func _input(event):
 				clicked = true
 			
 
-
-
 func on_enable():
-	label.text = tr("PRECINE")
+	label.text = tr("INTRODUCCION")
 	pass
 
 func on_disable():

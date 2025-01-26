@@ -14,7 +14,7 @@ config/name="GGJ25"
 run/main_scene="res://scenes/flujo/StateMachine.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.054902, 0.054902, 0.054902, 1)
-config/icon="res://icon.svg"
+config/icon="res://burbuja_trans.png"
 
 [autoload]
 
@@ -22,6 +22,9 @@ Global="*res://scripts/Global.gd"
 
 [display]
 
+window/size/mode=3
+window/size/resizable=false
+window/size/borderless=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

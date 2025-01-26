@@ -10,7 +10,9 @@ extends Node
 @onready var picnic = $Picnic
 @onready var cama = $Cama
 @onready var credits = $Credits
+@onready var pop = $Pop
 @onready var fade = $FadeScene
+@onready var precoito = $Prefollar
 
 @onready var bgm: AudioStreamPlayer2D = $BGM
 @onready var sfx_1: AudioStreamPlayer2D = $SFX1
@@ -20,6 +22,7 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.gms = self
+	Global.sfx = sfx_1
 	# Global.to_transition.connect(_on_totransition)
 	Global.transitioned.connect(_on_fade_scene_transitioned)
 	Global.on_end.connect(_on_end)
@@ -107,10 +110,18 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 			cine.visible = false
 			cine.on_disable()
 			cine.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.PREFOLLAR:
+			precoito.visible = false
+			precoito.on_disable()
+			precoito.process_mode = Node.PROCESS_MODE_DISABLED
 		Global.Scenes.CAMA:
 			cama.visible = false
 			cama.on_disable()
 			cama.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.POP:
+			pop.visible = false
+			pop.on_disable()
+			pop.process_mode = Node.PROCESS_MODE_DISABLED
 		Global.Scenes.CREDITS:
 			credits.visible = false
 			credits.process_mode = Node.PROCESS_MODE_DISABLED
@@ -149,10 +160,18 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 			cine.visible = true
 			cine.on_enable()
 			cine.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.PREFOLLAR:
+			precoito.visible = true
+			precoito.on_enable()
+			precoito.process_mode = Node.PROCESS_MODE_INHERIT
 		Global.Scenes.CAMA:
 			cama.visible = true
 			cama.on_enable()
 			cama.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.POP:
+			pop.visible = true
+			pop.on_enable()
+			pop.process_mode = Node.PROCESS_MODE_INHERIT
 		Global.Scenes.CREDITS:
 			credits.visible = true
 			credits.process_mode = Node.PROCESS_MODE_INHERIT

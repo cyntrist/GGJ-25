@@ -36,7 +36,7 @@ var credits = [
 		"BURBUJARRONES"
 	], [
 		"PROGRAMACIÓN",
-		"Pablo Iglesias Rodríguez",
+		"Pablo Iglesias Rodrigo",
 		"Andrés García Navarro",
 		"Cynthia Tristán Álvarez"
 	], [
@@ -52,6 +52,8 @@ var credits = [
 	], [
 		"AGRADECIMIENTOS ESPECIALES",
 		"King Africa"
+	], [
+		"y a ti :^]"
 	]
 	#],[
 		#"tetitas",
@@ -126,7 +128,7 @@ func _process(delta):
 	if lines.size() > 0:
 		for l in lines:
 			l.set_global_position(l.get_global_position() - Vector2(0, scroll_speed))
-			if l.get_global_position().y < -l.get_line_height():
+			if l.get_global_position().y < -500-l.get_line_height():
 				lines.erase(l)
 				l.queue_free()
 	elif started:
