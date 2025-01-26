@@ -33,13 +33,11 @@ rotation = -3.12273
 [node name="Draggable2" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("9_r15lc")]
 position = Vector2(94, -232)
 dragType = 3
-Ylimit = 200.0
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
 
 [node name="Draggable" parent="DraggesNormal" node_paths=PackedStringArray("draggersNodeBubble", "draggersNode") instance=ExtResource("9_r15lc")]
 position = Vector2(-142, -234)
 dragType = 3
-Ylimit = 200.0
 draggersNodeBubble = NodePath("../../Path2D/PathFollow2D/Burbuja")
 draggersNode = NodePath("..")
