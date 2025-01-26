@@ -1,7 +1,7 @@
 extends Node
 
 var timer = 0
-var frames_per_letter = 1
+var frames_per_letter = 4
 var elapsedTime: float = 0
 var maxTime: float = 8
 var textDisplay: float = 0
@@ -30,12 +30,12 @@ func _process(delta: float) -> void:
 		if label.visible_ratio == 1:
 			text_ended = true
 		if textDisplay < 1:
-			#if timer >= frames_per_letter:
-			timer = 0
-			label.visible_ratio = textDisplay
-			textDisplay += delta
-			#else:
-				#timer += 1
+			if timer >= frames_per_letter:
+				timer = 0
+				label.visible_ratio = textDisplay
+				textDisplay += delta
+			else:
+				timer += 1
 		else:
 			label.visible_ratio =  1
 		elapsedTime += delta
@@ -76,8 +76,8 @@ func _input(event):
 					Global.change_scene(Global.Scenes.PREPOSTCITA)
 					Global.next_stage()
 					return
-				6: # estas en el precama y vas a la cama
-					Global.change_scene(Global.Scenes.CAMA)
+				6: # estas en el precama y vas a la 2ª pre cama
+					Global.change_scene(Global.Scenes.PREFOLLAR)
 					Global.next_stage()
 					return
 				_:

@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://ivnstgh8b27e"]
+
+[ext_resource type="FontFile" uid="uid://cvuafexs3oeis" path="res://assets/fonts/meddon.ttf" id="1_frux4"]
+[ext_resource type="Script" path="res://scripts/scene_scripts/prepostcita.gd" id="2_eygv3"]
+[ext_resource type="Texture2D" uid="uid://dfhpxc8fyj13e" path="res://assets/Fondos/fondo.png" id="3_2ud1y"]
+[ext_resource type="Theme" uid="uid://clrlu3f44drqk" path="res://theme/style.tres" id="4_f7o7e"]
+[ext_resource type="Script" path="res://scenes/flujo/prefollar.gd" id="5_odavy"]
+
+[sub_resource type="Theme" id="Theme_c41h2"]
+default_font = ExtResource("1_frux4")
+
+[node name="Prefollar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_c41h2")
+script = ExtResource("2_eygv3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -385.0
+offset_top = -240.0
+offset_right = 1578.0
+offset_bottom = 884.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 3452.0
+offset_bottom = 2448.0
+scale = Vector2(0.36, 0.29)
+texture = ExtResource("3_2ud1y")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 1137.0
+offset_bottom = 628.0
+theme = ExtResource("4_f7o7e")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "Prefollar"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("5_odavy")

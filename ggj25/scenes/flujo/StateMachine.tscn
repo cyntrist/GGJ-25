@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c7qrogiqlu6kl"]
+[gd_scene load_steps=19 format=3 uid="uid://c7qrogiqlu6kl"]
 
 [ext_resource type="Script" path="res://scripts/GameStateMachine.gd" id="1_n0ssg"]
 [ext_resource type="PackedScene" uid="uid://doma3ldba1l8e" path="res://scenes/flujo/credits_scene.tscn" id="2_te1d5"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c3n36kyi4l3sj" path="res://scenes/flujo/cama_scene.tscn" id="3_mt0o5"]
 [ext_resource type="PackedScene" uid="uid://sraxxrvyh58f" path="res://scenes/flujo/cena_scene.tscn" id="4_khev6"]
 [ext_resource type="PackedScene" uid="uid://ymu78lthlqs4" path="res://scenes/flujo/cine_scene.tscn" id="5_2irew"]
+[ext_resource type="PackedScene" uid="uid://ivnstgh8b27e" path="res://scenes/flujo/prefollar_scene.tscn" id="5_8q5df"]
 [ext_resource type="Script" path="res://scripts/scene_scripts/cine.gd" id="6_veqdk"]
 [ext_resource type="PackedScene" uid="uid://dfa8uubvanr3d" path="res://scenes/flujo/picnic_scene.tscn" id="7_p7drm"]
 [ext_resource type="Script" path="res://scripts/scene_scripts/picnic.gd" id="8_ogxar"]
@@ -51,10 +52,22 @@ bg_color = Color(0, 0, 0, 1)
 
 [node name="Pop" parent="." instance=ExtResource("3_gqo0v")]
 process_mode = 4
+offset_left = -574.0
+offset_top = -314.0
+offset_right = -574.0
+offset_bottom = -314.0
 
 [node name="Cama" parent="." instance=ExtResource("3_mt0o5")]
 process_mode = 4
 visible = false
+
+[node name="Prefollar" parent="." instance=ExtResource("5_8q5df")]
+process_mode = 4
+visible = false
+offset_left = -579.0
+offset_top = -320.0
+offset_right = -579.0
+offset_bottom = -320.0
 
 [node name="Cena" parent="." instance=ExtResource("4_khev6")]
 process_mode = 4

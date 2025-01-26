@@ -6,7 +6,7 @@ signal on_enable(scene)
 signal on_disable(scene)
 signal on_end()
 
-enum Scenes { MAIN_MENU, INTRO, CONTEXTO, PREPOSTCITA, CENA, PICNIC, CINE, CAMA, POP, CREDITS, NULL}
+enum Scenes { MAIN_MENU, INTRO, CONTEXTO, PREPOSTCITA, CENA, PICNIC, CINE, CAMA, POP, CREDITS, NULL, PREFOLLAR}
 enum ObjsTypes { DEFORMABLE, COLOCABLE, PINTABLE}
 
 var gms

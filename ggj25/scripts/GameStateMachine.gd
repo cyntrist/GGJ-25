@@ -12,6 +12,7 @@ extends Node
 @onready var credits = $Credits
 @onready var pop = $Pop
 @onready var fade = $FadeScene
+@onready var precoito = $Prefollar
 
 @onready var bgm: AudioStreamPlayer2D = $BGM
 @onready var sfx_1: AudioStreamPlayer2D = $SFX1
@@ -108,6 +109,10 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 			cine.visible = false
 			cine.on_disable()
 			cine.process_mode = Node.PROCESS_MODE_DISABLED
+		Global.Scenes.PREFOLLAR:
+			precoito.visible = false
+			precoito.on_disable()
+			precoito.process_mode = Node.PROCESS_MODE_DISABLED
 		Global.Scenes.CAMA:
 			cama.visible = false
 			cama.on_disable()
@@ -154,6 +159,10 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 			cine.visible = true
 			cine.on_enable()
 			cine.process_mode = Node.PROCESS_MODE_INHERIT
+		Global.Scenes.PREFOLLAR:
+			precoito.visible = true
+			precoito.on_enable()
+			precoito.process_mode = Node.PROCESS_MODE_INHERIT
 		Global.Scenes.CAMA:
 			cama.visible = true
 			cama.on_enable()
