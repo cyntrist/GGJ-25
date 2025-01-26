@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://doma3ldba1l8e"]
+[gd_scene load_steps=3 format=3 uid="uid://doma3ldba1l8e"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_4f4al"]
+[ext_resource type="FontFile" uid="uid://gw8bpv5rucdk" path="res://assets/fonts/yuji.ttf" id="2_bka3s"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -47,5 +48,6 @@ offset_top = 1080.0
 offset_bottom = 1106.0
 grow_horizontal = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_bka3s")
 theme_override_font_sizes/font_size = 18
 horizontal_alignment = 1

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://kuee5s7qpvx2"]
+[gd_scene load_steps=8 format=3 uid="uid://kuee5s7qpvx2"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/contexto.gd" id="1_hruex"]
 [ext_resource type="Texture2D" uid="uid://brwuepfvsl0fr" path="res://assets/Fondos/nacimiento.png" id="2_lvmgo"]
 [ext_resource type="AudioStream" uid="uid://c2mug16efggx" path="res://sonido/Mainmenutheme.mp3" id="3_wggdh"]
+[ext_resource type="FontFile" uid="uid://gw8bpv5rucdk" path="res://assets/fonts/yuji.ttf" id="3_xpypl"]
 
 [sub_resource type="Animation" id="Animation_f2rc0"]
 length = 0.001
@@ -81,7 +82,6 @@ scale = Vector2(0.320001, 0.320001)
 texture = ExtResource("2_lvmgo")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 layout_mode = 0
 offset_left = -385.0
 offset_top = -240.0
@@ -96,6 +96,7 @@ offset_top = 71.0
 offset_right = 1052.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_xpypl")
 theme_override_font_sizes/font_size = 32
 text = "CONTEXTO
 "

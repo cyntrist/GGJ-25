@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnysdn0d3o7b2"]
+[gd_scene load_steps=4 format=3 uid="uid://dnysdn0d3o7b2"]
 
 [ext_resource type="Script" path="res://scripts/intro.gd" id="1_bqrie"]
 [ext_resource type="Texture2D" uid="uid://cpjaalgwoidff" path="res://assets/img/alcancilito.png" id="2_w86hu"]
+[ext_resource type="FontFile" uid="uid://gw8bpv5rucdk" path="res://assets/fonts/yuji.ttf" id="3_m0tim"]
 
 [node name="Intro" type="Control"]
 layout_mode = 3
@@ -57,13 +58,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -341.0
-offset_top = 160.0
-offset_right = 342.0
-offset_bottom = 251.0
+offset_left = -386.0
+offset_top = 148.0
+offset_right = 388.0
+offset_bottom = 239.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_m0tim")
 theme_override_font_sizes/font_size = 50
-text = "Alcanciles con miopía"
+text = "ALCANCILES CON MIOPÍA"
 horizontal_alignment = 1
 vertical_alignment = 1

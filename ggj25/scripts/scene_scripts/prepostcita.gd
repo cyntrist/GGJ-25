@@ -15,6 +15,7 @@ var transitioned = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# label.set("assets/fonts/meddon", font)
 	pass # Replace with function body.
 
 
@@ -71,6 +72,7 @@ func on_enable():
 	match Global.stage:
 		0: # precena
 			string = "PRECENA"
+			# label.font
 			pass
 		1: # poscena
 			string = "POSCENA"

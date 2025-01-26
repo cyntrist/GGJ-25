@@ -33,24 +33,25 @@ var lines := []
 
 var credits = [
 	[
-		"GGJ 25 BUBBLE"
+		"BURBUJARRONES"
 	], [
 		"PROGRAMACIÓN",
-		"Pablo Iglesias Rodrigo",
+		"Pablo Iglesias Rodríguez",
 		"Andrés García Navarro",
 		"Cynthia Tristán Álvarez"
 	], [
 		"ARTE",
-		"Nieves Alonso Gilsanz",
-		"Paula Alemany Rodriguez"
+		"Paula Alemany Rodriguez",
+		"Nieves Alonso Gilsanz"
 	], [
-		"STORY",
-		"Carmen Gomez Bezerra"
+		"NARRATIVA",
+		"Carmen Gómez Becerra"
 	], [
 		"SOUND DESIGN",
-		"Ariadna Alicia \"Ari\" Ruiz Castillo"
+		"Ariadna Ruiz Castillo"
 	], [
-		"AGRADECIMIENTOS ESPECIALES"
+		"AGRADECIMIENTOS ESPECIALES",
+		"King Africa"
 	]
 	#],[
 		#"tetitas",
