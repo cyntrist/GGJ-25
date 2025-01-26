@@ -91,8 +91,6 @@ script = ExtResource("5_naubm")
 rotation = -3.12273
 nextScene = 3
 
-[node name="DraggersBuble" type="Node2D" parent="Path2D/PathFollow2D"]
-
 [node name="DraggesNormal" type="Node2D" parent="."]
 position = Vector2(-3, -2)
 

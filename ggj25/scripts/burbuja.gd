@@ -6,7 +6,7 @@ extends Node2D
 @onready var burbuja_collider: CollisionShape2D = $"3D/Area2D/CollisionShape2D"
 @onready var burbuja_collider2: CollisionShape2D = $"3D/RigidBody2D/CollisionShape2D"
 @export var base_size_buble: float = 1
-@export var base_size_collider: float = 0.25
+@export var base_size_collider: float = 0.1
 @export var nextScene: int
 
 @export var color_r = 94 # Color que tiene que llegar en R.
@@ -83,7 +83,7 @@ func _area_enter(area: Area2D) -> void:
 		var scale1 = burbuja_mesh.scale
 		var scale2 = burbuja_collider.scale
 		next_scale1 = scale1 + Vector3(1,1,1) * Global.size_bubble_percent
-		next_scale2 = scale2 + Vector2(1,1) * Global.size_bubble_percent
+		next_scale2 = scale2 + Vector2(1,1) * (Global.size_bubble_percent/10)
 	else:
 		toend = true
 		

@@ -65,14 +65,12 @@ script = ExtResource("3_hqd0d")
 
 [node name="Burbuja" parent="Path2D/PathFollow2D" instance=ExtResource("4_x0mlk")]
 rotation = -3.12273
-base_size_collider = 0.25
 nextScene = 8
 
 [node name="DraggesNormal" type="Node2D" parent="."]
 
 [node name="ManoDer" parent="DraggesNormal" node_paths=PackedStringArray("draggersNode") instance=ExtResource("5_6niix")]
 position = Vector2(473, 223)
-dragType = 1
 draggersNode = NodePath("..")
 
 [node name="Button" parent="DraggesNormal/ManoDer" index="2"]
@@ -85,7 +83,6 @@ icon = ExtResource("6_uxd3j")
 
 [node name="ManoIzq" parent="DraggesNormal" node_paths=PackedStringArray("draggersNode") instance=ExtResource("5_6niix")]
 position = Vector2(-467, 226)
-dragType = 1
 draggersNode = NodePath("..")
 
 [node name="Button" parent="DraggesNormal/ManoIzq" index="2"]
