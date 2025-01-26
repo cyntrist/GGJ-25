@@ -40,6 +40,8 @@ func _process(delta: float) -> void:
 	burbuja_collider.scale = burbuja_collider.scale.lerp(next_scale2, delta * SCALE_STEP)
 	$"3D/RigidBody2D/CollisionShape2D".scale = burbuja_collider.scale.lerp(next_scale2, delta * SCALE_STEP)
 	
+	print(position)
+	
 	if toend:
 		if elapsedtime < maxtime:
 			elapsedtime += delta
