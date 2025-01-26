@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://drfd4ho53yt5b"]
+[gd_scene load_steps=5 format=3 uid="uid://drfd4ho53yt5b"]
 
+[ext_resource type="FontFile" uid="uid://cvuafexs3oeis" path="res://assets/fonts/meddon.ttf" id="1_dktv8"]
 [ext_resource type="Script" path="res://scripts/scene_scripts/prepostcita.gd" id="1_jhwqc"]
+[ext_resource type="Texture2D" uid="uid://dfhpxc8fyj13e" path="res://assets/Fondos/fondo.png" id="2_p2hip"]
+
+[sub_resource type="Theme" id="Theme_c41h2"]
+default_font = ExtResource("1_dktv8")
 
 [node name="Prepostcita" type="Control"]
 layout_mode = 3
@@ -9,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_c41h2")
 script = ExtResource("1_jhwqc")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -19,7 +25,14 @@ offset_right = 1578.0
 offset_bottom = 884.0
 color = Color(0, 0, 0, 1)
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 3452.0
+offset_bottom = 2448.0
+scale = Vector2(0.34, 0.27)
+texture = ExtResource("2_p2hip")
+
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 90.0
 offset_top = 71.0
 offset_right = 1052.0

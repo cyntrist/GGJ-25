@@ -12,10 +12,13 @@ var clicked = false
 var clicks = 0;
 var stop = false
 var transitioned = false
+@export var first_font : FontFile = null
+@export var second_font : FontFile = null
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# label.set("assets/fonts/meddon", font)
+	label.set("theme_override_fonts/font", first_font)
 	pass # Replace with function body.
 
 
@@ -47,19 +50,29 @@ func _input(event):
 		else:
 			match Global.stage:
 				0: # estas en la precena y vas a la cena
-					Global.change_scene(Global.Scenes.CENA)
+					# Global.change_scene(Global.Scenes.CENA)
+					Global.change_scene(Global.Scenes.PREPOSTCITA)
+					pass
 				1: # estas en la poscena y vas al precine
 					Global.change_scene(Global.Scenes.PREPOSTCITA)
+					pass
 				2: # estas en el precine y vas al cine
-					Global.change_scene(Global.Scenes.CINE)
+					# Global.change_scene(Global.Scenes.CINE)
+					Global.change_scene(Global.Scenes.PREPOSTCITA)
+					pass
 				3: # estas en el poscine y vas al prepicninc
 					Global.change_scene(Global.Scenes.PREPOSTCITA)
+					pass
 				4: # estas en el prepicnic y vas al picnic
-					Global.change_scene(Global.Scenes.PICNIC)
+					# Global.change_scene(Global.Scenes.PICNIC)
+					Global.change_scene(Global.Scenes.PREPOSTCITA)
+					pass
 				5: # estas en el pospicnic y vas a la precama
 					Global.change_scene(Global.Scenes.PREPOSTCITA)
+					pass
 				6: # estas en el precama y vas a la cama
 					Global.change_scene(Global.Scenes.CAMA)
+					pass
 				_:
 					print("PROBLEMA EN PREPOSTCITA")
 			Global.next_stage()
@@ -68,34 +81,40 @@ func _input(event):
 
 func on_enable():
 		# movidas del jason
-	var string = "PRECITA"
+	var string = "Precita"
 	match Global.stage:
 		0: # precena
-			string = "PRECENA"
-			# label.font
+			string = "Precena"
+			label.set("theme_override_fonts/font", first_font)
 			pass
 		1: # poscena
-			string = "POSCENA"
+			string = "Poscena"
+			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		2: # precine
-			string = "PRECINE"
+			string = "Precine"
+			label.set("theme_override_fonts/font", first_font)
 
 			pass
 		3: # poscine
-			string = "POSCINE"
+			string = "Poscine"
+			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		4: # prepicnic
-			string = "PREPICNIC"
+			string = "Prepicnic"
+			label.set("theme_override_fonts/font", first_font)
 
 			pass
 		5: # pospicnic
-			string = "POSPICNIC"
+			string = "Pospicnic"
+			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		6: # precama
-			string = "PRECAMA"
+			string = "Precama"
+			label.set("theme_override_fonts/font", first_font)
 			pass
 	label.text = string
 	pass

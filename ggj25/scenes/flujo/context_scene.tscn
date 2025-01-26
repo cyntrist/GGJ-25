@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://kuee5s7qpvx2"]
+[gd_scene load_steps=9 format=3 uid="uid://kuee5s7qpvx2"]
 
 [ext_resource type="Script" path="res://scripts/scene_scripts/contexto.gd" id="1_hruex"]
 [ext_resource type="Texture2D" uid="uid://brwuepfvsl0fr" path="res://assets/Fondos/nacimiento.png" id="2_lvmgo"]
+[ext_resource type="Texture2D" uid="uid://dfhpxc8fyj13e" path="res://assets/Fondos/fondo.png" id="3_snv0t"]
 [ext_resource type="AudioStream" uid="uid://c2mug16efggx" path="res://sonido/Mainmenutheme.mp3" id="3_wggdh"]
 [ext_resource type="FontFile" uid="uid://gw8bpv5rucdk" path="res://assets/fonts/yuji.ttf" id="3_xpypl"]
 
@@ -10,19 +11,19 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("Label:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 1)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label:modulate")
+tracks/1/path = NodePath("TextureRect2:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -31,25 +32,37 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.34, 0.27)]
+}
 
 [sub_resource type="Animation" id="Animation_35huq"]
 resource_name = "fadeout"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("Label:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label:modulate")
+tracks/1/path = NodePath("TextureRect2:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -57,6 +70,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.34, 0.27)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ob7jx"]
@@ -78,16 +103,14 @@ script = ExtResource("1_hruex")
 layout_mode = 0
 offset_right = 3840.0
 offset_bottom = 2160.0
-scale = Vector2(0.320001, 0.320001)
+scale = Vector2(0.335, 0.335)
 texture = ExtResource("2_lvmgo")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -385.0
-offset_top = -240.0
-offset_right = 1578.0
-offset_bottom = 884.0
-color = Color(0, 0, 0, 1)
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_right = 3452.0
+offset_bottom = 2448.0
+scale = Vector2(0.34, 0.27)
+texture = ExtResource("3_snv0t")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

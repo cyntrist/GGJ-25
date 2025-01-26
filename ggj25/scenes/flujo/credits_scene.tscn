@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://doma3ldba1l8e"]
+[gd_scene load_steps=4 format=3 uid="uid://doma3ldba1l8e"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_4f4al"]
 [ext_resource type="FontFile" uid="uid://gw8bpv5rucdk" path="res://assets/fonts/yuji.ttf" id="2_bka3s"]
+[ext_resource type="Texture2D" uid="uid://dfhpxc8fyj13e" path="res://assets/Fondos/fondo.png" id="3_y4vow"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -23,6 +24,13 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.054902, 0.054902, 0.054902, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 3452.0
+offset_bottom = 2448.0
+scale = Vector2(0.34, 0.27)
+texture = ExtResource("3_y4vow")
 
 [node name="VideoPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1

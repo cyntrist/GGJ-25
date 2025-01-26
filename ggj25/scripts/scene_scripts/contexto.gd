@@ -1,7 +1,6 @@
 extends Node
 
 @onready var label: Label = $Label
-@onready var background: ColorRect = $ColorRect
 var timer = 0
 var frames_per_letter = 4
 var elapsedTime: float = 0
