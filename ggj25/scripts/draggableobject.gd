@@ -34,12 +34,12 @@ func _onDown():
 func _onUp():
 	is_selected = false
 	Global.is_dragging = false
-	rb.sleeping = false
 	elapsedPercent = 0
 	if dragType == 3:
+		dentro = false
+		rb.sleeping = false
 		get_parent().remove_child(rb)
 		draggersNode.add_child(rb)
-		dentro = false
 		global_position = get_global_mouse_position()
 		print(get_parent().name)
 	#print("Despulsado")
