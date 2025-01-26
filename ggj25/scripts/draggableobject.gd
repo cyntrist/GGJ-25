@@ -53,6 +53,7 @@ func _input(event: InputEvent) -> void:
 
 # Para cuando se pulsa.
 func _onDown():
+	$AudioStreamPlayer2D.play()
 	is_selected = true
 	Global.is_dragging = true
 	#print("Pulsado")
