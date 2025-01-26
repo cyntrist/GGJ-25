@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bntoie4b8lq2u"]
+[gd_scene load_steps=10 format=3 uid="uid://ymu78lthlqs4"]
 
 [ext_resource type="Texture2D" uid="uid://dtse21j06jgl5" path="res://assets/Fondos/cine.jpg" id="1_wvrb2"]
 [ext_resource type="Script" path="res://scenes/bubble_follow.gd" id="2_w24gh"]

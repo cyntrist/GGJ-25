@@ -107,6 +107,7 @@ scale = Vector2(0.335, 0.335)
 texture = ExtResource("2_lvmgo")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 3452.0
 offset_bottom = 2448.0
 scale = Vector2(0.34, 0.27)

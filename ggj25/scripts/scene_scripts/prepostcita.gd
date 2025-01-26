@@ -84,35 +84,40 @@ func on_enable():
 	var string = "Precita"
 	match Global.stage:
 		0: # precena
-			string = "Precena"
+			string = "PRERESTAURANTE"
 			label.set("theme_override_fonts/font", first_font)
 			pass
 		1: # poscena
-			string = "Poscena"
+			string = "POSTRESTAURANTE"
 			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		2: # precine
-			string = "Precine"
+			string = "PRECINE"
 			label.set("theme_override_fonts/font", first_font)
 
 			pass
 		3: # poscine
-			string = "Poscine"
+			string = "POSTCINE"
+			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		4: # prepicnic
-			string = "Prepicnic"
+			string = "PREPICNIC"
+			label.set("theme_override_fonts/font", first_font)
 
 			pass
 		5: # pospicnic
-			string = "Pospicnic"
+			string = "POSTPICNIC"
+			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		6: # precama
-			string = "Precama"
+			string = "PREFOLLAR"
+			label.set("theme_override_fonts/font", first_font)
 			pass
-	label.text = string
+			
+	label.text = tr(string)
 	pass
 
 func on_disable():

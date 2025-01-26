@@ -55,6 +55,7 @@ func _input(event):
 
 
 func on_enable():
+	label.text = tr("PRECINE")
 	pass
 
 func on_disable():
