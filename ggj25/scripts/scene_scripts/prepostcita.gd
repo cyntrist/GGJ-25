@@ -92,35 +92,50 @@ func on_enable():
 	var string = "Precita"
 	match Global.stage:
 		0: # precena
+			Global.sfx.stream= load("res://sonido/monologoPreCine.mp3")
+			Global.sfx.play()
 			string = "PRERESTAURANTE"
 			label.set("theme_override_fonts/font", first_font)
+			
 			pass
 		1: # poscena
+			Global.sfx.stream= load("res://sonido/monologoPostCine.mp3")
+			Global.sfx.play()
 			string = "POSTRESTAURANTE"
 			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		2: # precine
+			Global.sfx.stream= load("res://sonido/monologoPreRestaurante.mp3")
+			Global.sfx.play()
 			string = "PRECINE"
 			label.set("theme_override_fonts/font", first_font)
 
 			pass
 		3: # poscine
+			Global.sfx.stream= load("res://sonido/monologoPostRestaurante.mp3")
+			Global.sfx.play()
 			string = "POSTCINE"
 			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		4: # prepicnic
+			Global.sfx.stream= load("res://sonido/monologoPrePicnic.mp3")
+			Global.sfx.play()
 			string = "PREPICNIC"
 			label.set("theme_override_fonts/font", first_font)
 
 			pass
 		5: # pospicnic
+			Global.sfx.stream= load("res://sonido/monologoPostPicnic.mp3")
+			Global.sfx.play()
 			string = "POSTPICNIC"
 			label.set("theme_override_fonts/font", second_font)
 
 			pass
 		6: # precama
+			Global.sfx.stream= load("res://sonido/monologoPrefollarParte1.mp3")
+			Global.sfx.play()
 			string = "PREFOLLARUNO"
 			label.set("theme_override_fonts/font", first_font)
 			pass

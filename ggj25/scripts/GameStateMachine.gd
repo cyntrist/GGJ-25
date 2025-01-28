@@ -161,6 +161,9 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 			cine.on_enable()
 			cine.process_mode = Node.PROCESS_MODE_INHERIT
 		Global.Scenes.PREFOLLAR:
+			Global.sfx.stream= load("res://sonido/monologoPreFollarParte2.mp3")
+			Global.sfx.play()
+			sfx_2.play()
 			precoito.visible = true
 			precoito.on_enable()
 			precoito.process_mode = Node.PROCESS_MODE_INHERIT
